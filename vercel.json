@@ -1,0 +1,19 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nuxtjs",
+  "regions": ["sin1"],
+  "headers": [
+    {
+      "source": "/_nuxt/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    { "source": "/favicon.ico", "destination": "/logo.png" }
+  ]
+}
