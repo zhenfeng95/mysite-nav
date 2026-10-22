@@ -503,6 +503,16 @@
                     "iconUrl": "/icons/sites/ipip.ico"
                 },
                 {
+                    "id": "itdog",
+                    "name": "ITDOG",
+                    "description": "在线 Ping、测速、路由追踪与 DNS 查询。",
+                    "url": "https://www.itdog.cn/",
+                    "tags": ["工具", "网络"],
+                    "officialUrlConfirmed": true,
+                    "updatedAt": "2026-10-21",
+                    "iconUrl": "/icons/sites/itdog.ico"
+                },
+                {
                     "id": "tinypng",
                     "name": "TinyPNG",
                     "description": "图片压缩工具。",
