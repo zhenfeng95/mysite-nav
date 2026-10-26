@@ -11,40 +11,37 @@
                 {
                     "id": "chatgpt",
                     "name": "ChatGPT",
-                    "description": "OpenAI 对话产品，适合问答、写作与日常协作。",
+                    "description": "OpenAI出品，全球领先AI助手",
                     "url": "https://chatgpt.com",
                     "tags": ["AI", "对话"],
                     "officialUrlConfirmed": true,
-                    "featured": true,
                     "updatedAt": "2026-10-12",
                     "iconUrl": "/icons/sites/chatgpt.ico"
                 },
                 {
                     "id": "claude",
                     "name": "Claude",
-                    "description": "Anthropic 对话助手，适合长文理解与代码协助。",
+                    "description": "Anthropic出品，擅长长文与代码",
                     "url": "https://claude.ai",
                     "tags": ["AI", "对话"],
                     "officialUrlConfirmed": true,
-                    "featured": true,
                     "updatedAt": "2026-10-12",
                     "iconUrl": "/icons/sites/claude.png"
                 },
                 {
                     "id": "gemini",
                     "name": "Gemini",
-                    "description": "Google 多模态 AI 助手。",
+                    "description": "Google多模态AI助手",
                     "url": "https://gemini.google.com",
                     "tags": ["AI", "对话"],
                     "officialUrlConfirmed": true,
-                    "featured": true,
                     "updatedAt": "2026-10-12",
                     "iconUrl": "/icons/sites/gemini.png"
                 },
                 {
                     "id": "deepseek",
                     "name": "DeepSeek",
-                    "description": "深度求索对话与推理模型。",
+                    "description": "深度求索，高性能开源大模型",
                     "url": "https://chat.deepseek.com",
                     "iconUrl": "/icons/sites/deepseek.ico",
                     "tags": ["AI", "对话"],
@@ -55,7 +52,7 @@
                 {
                     "id": "kimi",
                     "name": "Kimi",
-                    "description": "月之暗面长上下文助手。",
+                    "description": "月之暗面，超长上下文助手",
                     "url": "https://kimi.moonshot.cn",
                     "tags": ["AI", "对话"],
                     "officialUrlConfirmed": true,
@@ -65,7 +62,7 @@
                 {
                     "id": "doubao",
                     "name": "豆包",
-                    "description": "字节跳动 AI 助手。",
+                    "description": "字节跳动AI助手",
                     "url": "https://www.doubao.com",
                     "tags": ["AI", "对话"],
                     "officialUrlConfirmed": true,
@@ -75,7 +72,7 @@
                 {
                     "id": "tongyi",
                     "name": "通义千问",
-                    "description": "阿里云通义千问对话入口。",
+                    "description": "阿里云通义千问对话入口",
                     "url": "https://tongyi.aliyun.com",
                     "iconUrl": "/icons/sites/tongyi.svg",
                     "tags": ["AI", "对话"],
@@ -85,7 +82,7 @@
                 {
                     "id": "cursor",
                     "name": "Cursor",
-                    "description": "面向编程的 AI 编辑器，适合本地项目开发。",
+                    "description": "面向编程的AI代码编辑器",
                     "url": "https://cursor.com",
                     "tags": ["AI", "开发"],
                     "officialUrlConfirmed": true,
@@ -105,7 +102,7 @@
                 {
                     "id": "github",
                     "name": "GitHub",
-                    "description": "代码托管与协作平台。",
+                    "description": "全球最大代码托管与协作平台",
                     "url": "https://github.com",
                     "tags": ["开发", "协作"],
                     "officialUrlConfirmed": true,
@@ -116,7 +113,7 @@
                 {
                     "id": "gitee",
                     "name": "Gitee",
-                    "description": "国内代码托管与协作平台。",
+                    "description": "国内代码托管与协作平台",
                     "url": "https://gitee.com",
                     "tags": ["开发", "协作"],
                     "officialUrlConfirmed": true,
@@ -126,7 +123,7 @@
                 {
                     "id": "npm",
                     "name": "npm",
-                    "description": "JavaScript 包注册表与文档入口。",
+                    "description": "JavaScript包管理与文档入口",
                     "url": "https://www.npmjs.com",
                     "tags": ["开发", "包管理"],
                     "officialUrlConfirmed": true,
@@ -136,7 +133,7 @@
                 {
                     "id": "cloudflare",
                     "name": "Cloudflare",
-                    "description": "CDN、DNS 与 Workers 部署相关入口。",
+                    "description": "全球CDN、DNS与边缘计算",
                     "url": "https://www.cloudflare.com",
                     "tags": ["开发", "部署"],
                     "officialUrlConfirmed": true,
@@ -146,7 +143,7 @@
                 {
                     "id": "tencent-cloud",
                     "name": "腾讯云",
-                    "description": "腾讯云计算与云服务控制台。",
+                    "description": "腾讯云计算与云服务平台",
                     "url": "https://cloud.tencent.com",
                     "tags": ["开发", "云服务"],
                     "officialUrlConfirmed": true,
@@ -157,7 +154,7 @@
                 {
                     "id": "aliyun",
                     "name": "阿里云",
-                    "description": "阿里云计算与云服务控制台。",
+                    "description": "阿里云计算与云服务平台",
                     "url": "https://www.aliyun.com",
                     "tags": ["开发", "云服务"],
                     "officialUrlConfirmed": true,
@@ -168,7 +165,7 @@
                 {
                     "id": "stackoverflow",
                     "name": "Stack Overflow",
-                    "description": "开发者问答社区。",
+                    "description": "全球开发者问答社区",
                     "url": "https://stackoverflow.com",
                     "tags": ["开发", "问答"],
                     "officialUrlConfirmed": true,
@@ -178,7 +175,7 @@
                 {
                     "id": "mdn",
                     "name": "MDN",
-                    "description": "Web 技术权威文档。",
+                    "description": "Web技术权威参考文档",
                     "url": "https://developer.mozilla.org",
                     "tags": ["开发", "文档"],
                     "officialUrlConfirmed": true,
@@ -188,7 +185,7 @@
                 {
                     "id": "w3school",
                     "name": "W3School",
-                    "description": "Web 前端入门教程与参考。",
+                    "description": "Web前端入门教程与参考",
                     "url": "https://www.w3school.com.cn",
                     "tags": ["开发", "文档"],
                     "officialUrlConfirmed": true,
@@ -198,7 +195,7 @@
                 {
                     "id": "csdn",
                     "name": "CSDN",
-                    "description": "中文开发者技术社区。",
+                    "description": "中文开发者技术社区",
                     "url": "https://www.csdn.net",
                     "tags": ["开发", "社区"],
                     "officialUrlConfirmed": true,
@@ -208,7 +205,7 @@
                 {
                     "id": "juejin",
                     "name": "掘金",
-                    "description": "中文技术内容社区。",
+                    "description": "高质量中文技术内容社区",
                     "url": "https://juejin.cn",
                     "tags": ["开发", "社区"],
                     "officialUrlConfirmed": true,
@@ -218,7 +215,7 @@
                 {
                     "id": "linux-cmd",
                     "name": "Linux命令查询",
-                    "description": "Linux 命令速查手册。",
+                    "description": "Linux命令速查手册",
                     "url": "https://linux.lylme.com/",
                     "tags": ["开发", "Linux", "文档"],
                     "officialUrlConfirmed": true,
@@ -238,7 +235,7 @@
                 {
                     "id": "notion",
                     "name": "Notion",
-                    "description": "笔记与知识库协作工具。",
+                    "description": "全能笔记与知识库协作",
                     "url": "https://www.notion.so",
                     "tags": ["效率", "笔记"],
                     "officialUrlConfirmed": true,
@@ -249,7 +246,7 @@
                 {
                     "id": "linear",
                     "name": "Linear",
-                    "description": "产品与工程任务管理工具。",
+                    "description": "简洁高效的项目管理工具",
                     "url": "https://linear.app",
                     "tags": ["效率", "任务"],
                     "officialUrlConfirmed": true,
@@ -259,7 +256,7 @@
                 {
                     "id": "feishu",
                     "name": "飞书",
-                    "description": "协作办公与知识管理。",
+                    "description": "一站式协作办公与知识管理",
                     "url": "https://www.feishu.cn",
                     "tags": ["效率", "协作"],
                     "officialUrlConfirmed": true,
@@ -270,7 +267,7 @@
                 {
                     "id": "yuque",
                     "name": "语雀",
-                    "description": "知识库与文档协作。",
+                    "description": "专业知识库与文档协作",
                     "url": "https://www.yuque.com",
                     "tags": ["效率", "文档"],
                     "officialUrlConfirmed": true,
@@ -280,7 +277,7 @@
                 {
                     "id": "wolai",
                     "name": "我来",
-                    "description": "在线协作笔记。",
+                    "description": "灵活好用的在线协作笔记",
                     "url": "https://www.wolai.com",
                     "tags": ["效率", "笔记"],
                     "officialUrlConfirmed": true,
@@ -290,12 +287,33 @@
                 {
                     "id": "processon",
                     "name": "ProcessOn",
-                    "description": "在线流程图与思维导图。",
+                    "description": "在线流程图与思维导图",
                     "url": "https://www.processon.com",
                     "tags": ["效率", "绘图"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
                     "iconUrl": "/icons/sites/processon.ico"
+                }
+            ]
+        },
+        {
+            "id": "invest",
+            "slug": "invest",
+            "name": "投资",
+            "fullName": "港美股与跨境投资入口",
+            "description": "跨境投资、开户教程与境外资源导航。",
+            "icon": "invest",
+            "items": [
+                {
+                    "id": "zheninvest",
+                    "name": "Zhen Invest",
+                    "description": "港美股与跨境投资入口，让跨境投资更简单",
+                    "url": "https://zheninvest.com",
+                    "tags": ["投资", "港美股"],
+                    "officialUrlConfirmed": true,
+                    "featured": true,
+                    "updatedAt": "2026-10-26",
+                    "iconUrl": "/icons/sites/zheninvest.png"
                 }
             ]
         },
@@ -310,7 +328,7 @@
                 {
                     "id": "figma",
                     "name": "Figma",
-                    "description": "协作式界面设计工具。",
+                    "description": "协作式界面设计工具",
                     "url": "https://www.figma.com",
                     "tags": ["设计", "UI"],
                     "officialUrlConfirmed": true,
@@ -321,7 +339,7 @@
                 {
                     "id": "lucide",
                     "name": "Lucide",
-                    "description": "开源图标集，适合产品与文档使用。",
+                    "description": "简洁好用的开源图标集",
                     "url": "https://lucide.dev",
                     "tags": ["设计", "图标"],
                     "officialUrlConfirmed": true,
@@ -331,7 +349,7 @@
                 {
                     "id": "iconfont",
                     "name": "iconfont",
-                    "description": "阿里巴巴矢量图标库。",
+                    "description": "阿里巴巴矢量图标库",
                     "url": "https://www.iconfont.cn",
                     "tags": ["设计", "图标"],
                     "officialUrlConfirmed": true,
@@ -341,7 +359,7 @@
                 {
                     "id": "unsplash",
                     "name": "Unsplash",
-                    "description": "免费高质量图片素材。",
+                    "description": "免费高质量图片素材库",
                     "url": "https://unsplash.com",
                     "tags": ["设计", "图片"],
                     "officialUrlConfirmed": true,
@@ -351,7 +369,7 @@
                 {
                     "id": "dribbble",
                     "name": "Dribbble",
-                    "description": "设计灵感与作品社区。",
+                    "description": "设计师灵感与作品社区",
                     "url": "https://dribbble.com",
                     "tags": ["设计", "灵感"],
                     "officialUrlConfirmed": true,
@@ -361,7 +379,7 @@
                 {
                     "id": "coolors",
                     "name": "Coolors",
-                    "description": "配色方案生成工具。",
+                    "description": "快速生成配色方案",
                     "url": "https://coolors.co",
                     "tags": ["设计", "配色"],
                     "officialUrlConfirmed": true,
@@ -381,7 +399,7 @@
                 {
                     "id": "weibo",
                     "name": "微博",
-                    "description": "社交媒体平台。",
+                    "description": "热点资讯与社交媒体平台",
                     "url": "https://weibo.com",
                     "tags": ["社交"],
                     "officialUrlConfirmed": true,
@@ -392,7 +410,7 @@
                 {
                     "id": "zhihu",
                     "name": "知乎",
-                    "description": "中文问答社区。",
+                    "description": "中文高质量问答社区",
                     "url": "https://www.zhihu.com",
                     "tags": ["社交", "问答"],
                     "officialUrlConfirmed": true,
@@ -403,7 +421,7 @@
                 {
                     "id": "bilibili",
                     "name": "哔哩哔哩",
-                    "description": "视频弹幕社区。",
+                    "description": "年轻人喜爱的视频弹幕社区",
                     "url": "https://www.bilibili.com",
                     "tags": ["社交", "视频"],
                     "officialUrlConfirmed": true,
@@ -414,7 +432,7 @@
                 {
                     "id": "xiaohongshu",
                     "name": "小红书",
-                    "description": "生活方式与种草社区。",
+                    "description": "生活方式与种草社区",
                     "url": "https://www.xiaohongshu.com",
                     "tags": ["社交"],
                     "officialUrlConfirmed": true,
@@ -424,7 +442,7 @@
                 {
                     "id": "gmail",
                     "name": "Gmail",
-                    "description": "Google 邮箱。",
+                    "description": "Google邮箱，简洁高效",
                     "url": "https://mail.google.com",
                     "tags": ["社交", "邮箱"],
                     "officialUrlConfirmed": true,
@@ -434,7 +452,7 @@
                 {
                     "id": "outlook",
                     "name": "Outlook",
-                    "description": "Microsoft 邮箱。",
+                    "description": "Microsoft邮箱与日历",
                     "url": "https://outlook.live.com",
                     "tags": ["社交", "邮箱"],
                     "officialUrlConfirmed": true,
@@ -454,7 +472,7 @@
                 {
                     "id": "translate",
                     "name": "Google 翻译",
-                    "description": "多语言在线翻译。",
+                    "description": "多语言在线翻译工具",
                     "url": "https://translate.google.com",
                     "tags": ["工具", "翻译"],
                     "officialUrlConfirmed": true,
@@ -465,7 +483,7 @@
                 {
                     "id": "youdao",
                     "name": "有道翻译",
-                    "description": "网易有道在线翻译。",
+                    "description": "网易有道智能翻译",
                     "url": "https://fanyi.youdao.com",
                     "tags": ["工具", "翻译"],
                     "officialUrlConfirmed": true,
@@ -475,7 +493,7 @@
                 {
                     "id": "jsonformatter",
                     "name": "JSON 格式化",
-                    "description": "在线 JSON 校验与美化。",
+                    "description": "在线JSON校验与美化",
                     "url": "https://jsonformatter.org",
                     "tags": ["工具", "开发"],
                     "officialUrlConfirmed": true,
@@ -485,7 +503,7 @@
                 {
                     "id": "regex101",
                     "name": "Regex101",
-                    "description": "正则表达式测试与调试。",
+                    "description": "正则表达式测试与调试",
                     "url": "https://regex101.com",
                     "tags": ["工具", "开发"],
                     "officialUrlConfirmed": true,
@@ -495,7 +513,7 @@
                 {
                     "id": "ipip",
                     "name": "IP 查询",
-                    "description": "IP 地址归属地查询。",
+                    "description": "IP地址归属地精准查询",
                     "url": "https://www.ipip.net",
                     "tags": ["工具", "网络"],
                     "officialUrlConfirmed": true,
@@ -505,7 +523,7 @@
                 {
                     "id": "itdog",
                     "name": "ITDOG",
-                    "description": "在线 Ping、测速、路由追踪与 DNS 查询。",
+                    "description": "在线Ping测速与路由追踪",
                     "url": "https://www.itdog.cn/",
                     "tags": ["工具", "网络"],
                     "officialUrlConfirmed": true,
@@ -515,7 +533,7 @@
                 {
                     "id": "tinypng",
                     "name": "TinyPNG",
-                    "description": "图片压缩工具。",
+                    "description": "智能压缩PNG与JPEG图片",
                     "url": "https://tinypng.com",
                     "tags": ["工具", "图片"],
                     "officialUrlConfirmed": true,
@@ -525,7 +543,7 @@
                 {
                     "id": "squoosh",
                     "name": "Squoosh",
-                    "description": "浏览器内压缩与转换图片，隐私本地处理。",
+                    "description": "浏览器内本地图片压缩",
                     "url": "https://squoosh.app",
                     "tags": ["工具", "图片"],
                     "officialUrlConfirmed": true,
@@ -535,7 +553,7 @@
                 {
                     "id": "cli-im",
                     "name": "草料二维码",
-                    "description": "在线生成与管理二维码，支持活码与多种场景。",
+                    "description": "在线生成与管理二维码",
                     "url": "https://cli.im",
                     "tags": ["工具", "二维码"],
                     "officialUrlConfirmed": true,
@@ -545,7 +563,7 @@
                 {
                     "id": "markdown-cn-editor",
                     "name": "Markdown 编辑器",
-                    "description": "在线 Markdown 编辑与实时预览。",
+                    "description": "在线Markdown编辑与预览",
                     "url": "https://markdown.com.cn/editor/",
                     "tags": ["工具", "写作"],
                     "officialUrlConfirmed": true,
@@ -565,7 +583,7 @@
                 {
                     "id": "baidu-pan",
                     "name": "百度网盘",
-                    "description": "百度云存储与文件同步。",
+                    "description": "百度云存储与文件同步",
                     "url": "https://pan.baidu.com",
                     "tags": ["网盘", "存储"],
                     "officialUrlConfirmed": true,
@@ -576,7 +594,7 @@
                 {
                     "id": "aliyun-pan",
                     "name": "阿里云盘",
-                    "description": "阿里云盘文件存储与分享。",
+                    "description": "不限速的云盘存储与分享",
                     "url": "https://www.alipan.com",
                     "tags": ["网盘", "存储"],
                     "officialUrlConfirmed": true,
@@ -587,7 +605,7 @@
                 {
                     "id": "quark-pan",
                     "name": "夸克网盘",
-                    "description": "夸克网盘文件存储。",
+                    "description": "夸克网盘文件存储",
                     "url": "https://pan.quark.cn",
                     "tags": ["网盘", "存储"],
                     "officialUrlConfirmed": true,
@@ -598,7 +616,7 @@
                 {
                     "id": "xunlei-pan",
                     "name": "迅雷云盘",
-                    "description": "迅雷云盘文件存储。",
+                    "description": "迅雷云盘文件存储",
                     "url": "https://pan.xunlei.com",
                     "tags": ["网盘", "存储"],
                     "officialUrlConfirmed": true,
@@ -608,7 +626,7 @@
                 {
                     "id": "tianyi-pan",
                     "name": "天翼云盘",
-                    "description": "中国电信天翼云盘。",
+                    "description": "中国电信天翼云盘",
                     "url": "https://cloud.189.cn",
                     "tags": ["网盘", "存储"],
                     "officialUrlConfirmed": true,
@@ -618,7 +636,7 @@
                 {
                     "id": "uc-pan",
                     "name": "UC网盘",
-                    "description": "UC 网盘文件存储。",
+                    "description": "UC网盘文件存储",
                     "url": "https://drive.uc.cn",
                     "tags": ["网盘", "存储"],
                     "officialUrlConfirmed": true,
@@ -628,7 +646,7 @@
                 {
                     "id": "lanzou-pan",
                     "name": "蓝奏云",
-                    "description": "蓝奏云文件分享与存储。",
+                    "description": "轻量文件分享与存储",
                     "url": "https://www.lanzou.com",
                     "tags": ["网盘", "存储"],
                     "officialUrlConfirmed": true,
@@ -638,7 +656,7 @@
                 {
                     "id": "onedrive",
                     "name": "OneDrive",
-                    "description": "Microsoft 云存储。",
+                    "description": "Microsoft云存储服务",
                     "url": "https://onedrive.live.com",
                     "tags": ["网盘", "存储"],
                     "officialUrlConfirmed": true,
@@ -658,7 +676,7 @@
                 {
                     "id": "tencent-video",
                     "name": "腾讯视频",
-                    "description": "腾讯视频在线影视。",
+                    "description": "腾讯视频在线影视",
                     "url": "https://v.qq.com",
                     "tags": ["影视", "视频"],
                     "officialUrlConfirmed": true,
@@ -669,7 +687,7 @@
                 {
                     "id": "youku",
                     "name": "优酷",
-                    "description": "优酷在线视频。",
+                    "description": "优酷在线视频平台",
                     "url": "https://www.youku.com",
                     "tags": ["影视", "视频"],
                     "officialUrlConfirmed": true,
@@ -680,7 +698,7 @@
                 {
                     "id": "iqiyi",
                     "name": "爱奇艺",
-                    "description": "爱奇艺在线影视。",
+                    "description": "爱奇艺在线影视娱乐",
                     "url": "https://www.iqiyi.com",
                     "tags": ["影视", "视频"],
                     "officialUrlConfirmed": true,
@@ -691,7 +709,7 @@
                 {
                     "id": "bilibili-video",
                     "name": "哔哩哔哩",
-                    "description": "B站视频与番剧。",
+                    "description": "B站视频、番剧与直播",
                     "url": "https://www.bilibili.com",
                     "tags": ["影视", "视频"],
                     "officialUrlConfirmed": true,
@@ -701,7 +719,7 @@
                 {
                     "id": "cctv",
                     "name": "CCTV直播",
-                    "description": "央视网直播与节目。",
+                    "description": "央视网直播与节目回看",
                     "url": "https://tv.cctv.com",
                     "tags": ["影视", "直播"],
                     "officialUrlConfirmed": true,
@@ -711,7 +729,7 @@
                 {
                     "id": "douyin",
                     "name": "抖音网页版",
-                    "description": "抖音短视频网页版。",
+                    "description": "抖音短视频网页版",
                     "url": "https://www.douyin.com",
                     "tags": ["影视", "短视频"],
                     "officialUrlConfirmed": true,
@@ -721,7 +739,7 @@
                 {
                     "id": "kuaishou",
                     "name": "快手网页版",
-                    "description": "快手短视频网页版。",
+                    "description": "快手短视频网页版",
                     "url": "https://www.kuaishou.com",
                     "tags": ["影视", "短视频"],
                     "officialUrlConfirmed": true,
@@ -731,7 +749,7 @@
                 {
                     "id": "huya",
                     "name": "虎牙直播",
-                    "description": "虎牙游戏与娱乐直播。",
+                    "description": "虎牙游戏与娱乐直播",
                     "url": "https://www.huya.com",
                     "tags": ["影视", "直播"],
                     "officialUrlConfirmed": true,
@@ -741,7 +759,7 @@
                 {
                     "id": "douyu",
                     "name": "斗鱼直播",
-                    "description": "斗鱼游戏与娱乐直播。",
+                    "description": "斗鱼游戏与娱乐直播",
                     "url": "https://www.douyu.com",
                     "tags": ["影视", "直播"],
                     "officialUrlConfirmed": true,
@@ -751,7 +769,7 @@
                 {
                     "id": "egame-qq",
                     "name": "企鹅电竞",
-                    "description": "腾讯企鹅电竞直播。",
+                    "description": "腾讯企鹅电竞直播",
                     "url": "https://egame.qq.com",
                     "tags": ["影视", "电竞"],
                     "officialUrlConfirmed": true,
@@ -771,7 +789,7 @@
                 {
                     "id": "netease-music",
                     "name": "网易云音乐",
-                    "description": "网易云音乐在线听歌。",
+                    "description": "发现好音乐，分享好心情",
                     "url": "https://music.163.com",
                     "tags": ["音乐"],
                     "officialUrlConfirmed": true,
@@ -782,7 +800,7 @@
                 {
                     "id": "qq-music",
                     "name": "QQ音乐",
-                    "description": "QQ 音乐在线听歌。",
+                    "description": "海量曲库，听我想听",
                     "url": "https://y.qq.com",
                     "tags": ["音乐"],
                     "officialUrlConfirmed": true,
@@ -793,7 +811,7 @@
                 {
                     "id": "kugou",
                     "name": "酷狗音乐",
-                    "description": "酷狗音乐在线听歌。",
+                    "description": "酷狗音乐在线听歌",
                     "url": "https://www.kugou.com",
                     "tags": ["音乐"],
                     "officialUrlConfirmed": true,
@@ -813,7 +831,7 @@
                 {
                     "id": "51la",
                     "name": "51.la",
-                    "description": "我要啦网站统计，常用 PV / UV 统计。",
+                    "description": "我要啦，常用网站PV/UV统计",
                     "url": "https://www.51.la",
                     "tags": ["统计", "PV", "UV"],
                     "officialUrlConfirmed": true,
@@ -824,7 +842,7 @@
                 {
                     "id": "baidu-tongji",
                     "name": "百度统计",
-                    "description": "百度官方网站流量与转化分析。",
+                    "description": "百度官方网站流量分析",
                     "url": "https://tongji.baidu.com",
                     "tags": ["统计", "PV", "UV"],
                     "officialUrlConfirmed": true,
@@ -835,7 +853,7 @@
                 {
                     "id": "umeng",
                     "name": "友盟+",
-                    "description": "原 CNZZ，应用与网站数据统计分析。",
+                    "description": "应用与网站数据统计分析",
                     "url": "https://www.umeng.com",
                     "tags": ["统计", "PV", "UV"],
                     "officialUrlConfirmed": true,
@@ -846,7 +864,7 @@
                 {
                     "id": "google-analytics",
                     "name": "Google Analytics",
-                    "description": "Google 网站与应用流量分析。",
+                    "description": "Google网站与应用流量分析",
                     "url": "https://analytics.google.com",
                     "tags": ["统计", "PV", "UV"],
                     "officialUrlConfirmed": true,
@@ -857,7 +875,7 @@
                 {
                     "id": "microsoft-clarity",
                     "name": "Microsoft Clarity",
-                    "description": "免费热力图、录屏与行为分析。",
+                    "description": "免费热力图与会话录屏",
                     "url": "https://clarity.microsoft.com",
                     "tags": ["统计", "热力图"],
                     "officialUrlConfirmed": true,
@@ -867,7 +885,7 @@
                 {
                     "id": "cloudflare-analytics",
                     "name": "Cloudflare Analytics",
-                    "description": "Cloudflare 免费隐私友好网站统计。",
+                    "description": "隐私友好的免费网站统计",
                     "url": "https://www.cloudflare.com/web-analytics/",
                     "tags": ["统计", "PV"],
                     "officialUrlConfirmed": true,
@@ -877,7 +895,7 @@
                 {
                     "id": "matomo",
                     "name": "Matomo",
-                    "description": "开源、可自托管的网站分析平台。",
+                    "description": "开源可自托管的网站分析",
                     "url": "https://matomo.org",
                     "tags": ["统计", "开源"],
                     "officialUrlConfirmed": true,
@@ -887,7 +905,7 @@
                 {
                     "id": "plausible",
                     "name": "Plausible",
-                    "description": "轻量、隐私友好的网站分析。",
+                    "description": "轻量、隐私友好的网站分析",
                     "url": "https://plausible.io",
                     "tags": ["统计", "隐私"],
                     "officialUrlConfirmed": true,
@@ -897,7 +915,7 @@
                 {
                     "id": "hotjar",
                     "name": "Hotjar",
-                    "description": "热力图、会话录制与用户反馈。",
+                    "description": "热力图、录屏与用户反馈",
                     "url": "https://www.hotjar.com",
                     "tags": ["统计", "热力图"],
                     "officialUrlConfirmed": true,
@@ -907,7 +925,7 @@
                 {
                     "id": "sensorsdata",
                     "name": "神策数据",
-                    "description": "国内用户行为分析与数据运营平台。",
+                    "description": "用户行为分析与数据运营",
                     "url": "https://www.sensorsdata.cn",
                     "tags": ["统计", "行为分析"],
                     "officialUrlConfirmed": true,
@@ -917,7 +935,7 @@
                 {
                     "id": "growingio",
                     "name": "GrowingIO",
-                    "description": "增长分析与用户行为数据平台。",
+                    "description": "增长分析与用户行为洞察",
                     "url": "https://www.growingio.com",
                     "tags": ["统计", "增长"],
                     "officialUrlConfirmed": true,
@@ -927,7 +945,7 @@
                 {
                     "id": "volcengine-datafinder",
                     "name": "火山引擎增长分析",
-                    "description": "字节跳动火山引擎 DataFinder。",
+                    "description": "火山引擎增长分析平台",
                     "url": "https://www.volcengine.com/product/datafinder",
                     "tags": ["统计", "增长"],
                     "officialUrlConfirmed": true,
@@ -937,7 +955,7 @@
                 {
                     "id": "mixpanel",
                     "name": "Mixpanel",
-                    "description": "产品事件与用户行为分析。",
+                    "description": "产品事件与用户行为分析",
                     "url": "https://mixpanel.com",
                     "tags": ["统计", "产品分析"],
                     "officialUrlConfirmed": true,
@@ -947,7 +965,7 @@
                 {
                     "id": "amplitude",
                     "name": "Amplitude",
-                    "description": "产品增长与用户行为分析平台。",
+                    "description": "产品增长与用户行为分析",
                     "url": "https://amplitude.com",
                     "tags": ["统计", "产品分析"],
                     "officialUrlConfirmed": true,
@@ -957,7 +975,7 @@
                 {
                     "id": "cnzz",
                     "name": "CNZZ",
-                    "description": "站长统计入口，现已并入友盟+。",
+                    "description": "站长统计，现已并入友盟+",
                     "url": "https://www.cnzz.com",
                     "tags": ["统计", "PV", "UV"],
                     "officialUrlConfirmed": true,
@@ -977,7 +995,7 @@
                 {
                     "id": "baidu-ziyuan",
                     "name": "百度站长",
-                    "description": "百度搜索资源平台，提交与收录管理。",
+                    "description": "百度搜索资源提交与收录",
                     "url": "https://ziyuan.baidu.com",
                     "tags": ["站长", "收录"],
                     "officialUrlConfirmed": true,
@@ -988,7 +1006,7 @@
                 {
                     "id": "google-search-console",
                     "name": "Google Search Console",
-                    "description": "Google 搜索表现、索引与 Sitemap 管理。",
+                    "description": "Google搜索表现与索引管理",
                     "url": "https://search.google.com/search-console",
                     "tags": ["站长", "收录"],
                     "officialUrlConfirmed": true,
@@ -999,7 +1017,7 @@
                 {
                     "id": "bing-webmaster",
                     "name": "必应站长",
-                    "description": "Bing Webmaster Tools。",
+                    "description": "必应站长工具与Sitemap",
                     "url": "https://www.bing.com/webmasters",
                     "tags": ["站长", "收录"],
                     "officialUrlConfirmed": true,
@@ -1010,7 +1028,7 @@
                 {
                     "id": "sogou-webmaster",
                     "name": "搜狗站长",
-                    "description": "搜狗搜索资源平台。",
+                    "description": "搜狗搜索资源平台",
                     "url": "https://zhanzhang.sogou.com",
                     "tags": ["站长", "收录"],
                     "officialUrlConfirmed": true,
@@ -1021,7 +1039,7 @@
                 {
                     "id": "360-webmaster",
                     "name": "360 站长",
-                    "description": "360 搜索站长平台。",
+                    "description": "360搜索站长平台",
                     "url": "https://zhanzhang.so.com",
                     "tags": ["站长", "收录"],
                     "officialUrlConfirmed": true,
@@ -1031,7 +1049,7 @@
                 {
                     "id": "shenma-webmaster",
                     "name": "神马站长",
-                    "description": "神马搜索站长平台（UC / 夸克）。",
+                    "description": "神马搜索站长平台",
                     "url": "https://zhanzhang.sm.cn",
                     "tags": ["站长", "收录"],
                     "officialUrlConfirmed": true,
@@ -1041,7 +1059,7 @@
                 {
                     "id": "toutiao-webmaster",
                     "name": "头条搜索站长",
-                    "description": "今日头条搜索资源平台。",
+                    "description": "头条搜索资源平台",
                     "url": "https://zhanzhang.toutiao.com",
                     "tags": ["站长", "收录"],
                     "officialUrlConfirmed": true,
@@ -1051,7 +1069,7 @@
                 {
                     "id": "yandex-webmaster",
                     "name": "Yandex Webmaster",
-                    "description": "Yandex 站长工具。",
+                    "description": "Yandex站长工具",
                     "url": "https://webmaster.yandex.com",
                     "tags": ["站长", "收录"],
                     "officialUrlConfirmed": true,
@@ -1061,7 +1079,7 @@
                 {
                     "id": "tool-chinaz",
                     "name": "站长工具",
-                    "description": "权重查询、SEO 检测等站长工具集。",
+                    "description": "权重查询与SEO检测工具",
                     "url": "https://tool.chinaz.com",
                     "tags": ["站长", "SEO"],
                     "officialUrlConfirmed": true,
@@ -1071,7 +1089,7 @@
                 {
                     "id": "aizhan",
                     "name": "爱站网",
-                    "description": "权重、反链与网站综合查询。",
+                    "description": "权重、反链与网站综合查询",
                     "url": "https://www.aizhan.com",
                     "tags": ["站长", "SEO"],
                     "officialUrlConfirmed": true,
@@ -1081,7 +1099,7 @@
                 {
                     "id": "5118",
                     "name": "5118",
-                    "description": "关键词挖掘与 SEO 数据平台。",
+                    "description": "关键词挖掘与SEO数据平台",
                     "url": "https://www.5118.com",
                     "tags": ["站长", "SEO"],
                     "officialUrlConfirmed": true,
@@ -1091,7 +1109,7 @@
                 {
                     "id": "seores",
                     "name": "站长网",
-                    "description": "站长社区与建站资源（admin5）。",
+                    "description": "站长社区与建站资源",
                     "url": "https://www.admin5.com",
                     "tags": ["站长", "社区"],
                     "officialUrlConfirmed": true,

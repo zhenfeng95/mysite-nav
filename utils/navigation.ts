@@ -18,6 +18,12 @@ export const navigationGroups: NavigationGroup[] = [
     slugs: ['ai', 'dev', 'productivity'],
   },
   {
+    id: 'finance',
+    title: '投资',
+    description: '港美股与跨境投资相关入口。',
+    slugs: ['invest'],
+  },
+  {
     id: 'create',
     title: '设计与创作',
     description: '设计工具与素材相关入口。',
@@ -41,6 +47,7 @@ const shortDescriptions: Record<string, string> = {
   ai: '对话、写作与开发相关 AI 入口',
   dev: '代码托管、包管理与部署入口',
   productivity: '笔记、任务与协作入口',
+  invest: '港美股与跨境投资入口',
   design: '界面设计与图标资源入口',
   social: '社交、问答与邮箱入口',
   tools: '翻译、查询与格式化工具',

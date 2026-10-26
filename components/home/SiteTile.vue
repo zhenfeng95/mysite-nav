@@ -39,14 +39,13 @@ function bindImg(el: Element | null) {
     :href="item.url"
     target="_blank"
     rel="noreferrer noopener"
-    class="group flex flex-col items-center gap-2 rounded-xl px-1 py-2 text-center transition hover:-translate-y-0.5"
-    :title="item.description"
+    class="group flex items-center gap-3 rounded-2xl border border-zinc-200/80 bg-white px-3 py-2.5 shadow-sm transition hover:-translate-y-0.5 hover:border-zinc-300 hover:shadow-md sm:gap-3.5 sm:px-3.5 sm:py-3"
   >
     <span
-      class="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-black/5 transition group-hover:shadow-md sm:h-12 sm:w-12"
+      class="relative flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-zinc-50 ring-1 ring-zinc-200/70 sm:h-12 sm:w-12"
     >
       <span
-        class="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-sky-500 to-cyan-600 text-sm font-semibold text-white"
+        class="flex h-full w-full items-center justify-center bg-gradient-to-br from-sky-500 to-cyan-600 text-base font-semibold text-white"
         aria-hidden="true"
       >
         {{ item.name.slice(0, 1) }}
@@ -57,17 +56,23 @@ function bindImg(el: Element | null) {
         :ref="bindImg"
         :src="favicon"
         :alt="item.name"
-        width="28"
-        height="28"
-        class="absolute h-7 w-7 bg-white object-contain"
+        width="48"
+        height="48"
+        class="absolute inset-0 h-full w-full bg-white object-contain p-1.5"
         loading="lazy"
         decoding="async"
         referrerpolicy="no-referrer"
         @error="onImgError"
       >
     </span>
-    <span class="line-clamp-1 max-w-[4.5rem] text-xs text-zinc-700 sm:max-w-[5.5rem] sm:text-[13px]">
-      {{ item.name }}
+
+    <span class="min-w-0 flex-1 text-left">
+      <span class="block truncate text-sm font-semibold tracking-tight text-zinc-900 sm:text-[15px]">
+        {{ item.name }}
+      </span>
+      <span class="mt-0.5 block line-clamp-1 text-xs leading-5 text-zinc-500 sm:text-[13px]">
+        {{ item.description }}
+      </span>
     </span>
   </a>
 </template>

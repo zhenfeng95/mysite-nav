@@ -8,6 +8,9 @@ export type NavigationIcon =
   | 'analytics'
   | 'webmaster'
   | 'cloud'
+  | 'video'
+  | 'music'
+  | 'invest'
 
 export interface NavigationItem {
   id: string
