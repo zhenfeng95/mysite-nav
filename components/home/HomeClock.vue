@@ -10,8 +10,10 @@ const timeText = computed(() => {
   return `${h}:${m}:${s}`
 })
 
+const { locale } = useAppI18n()
+
 const dateText = computed(() => {
-  return new Intl.DateTimeFormat('zh-CN', {
+  return new Intl.DateTimeFormat(locale.value === 'en' ? 'en-US' : 'zh-CN', {
     month: 'long',
     day: 'numeric',
     weekday: 'short',

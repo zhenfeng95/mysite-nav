@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { SITE_DISCLAIMER, SITE_NAME } from '~/utils/site'
+const { t } = useAppI18n()
 
 usePageSeo({
-  title: '免责声明',
-  description: `${SITE_NAME} 内容免责声明。`,
+  title: t('disclaimerTitle'),
+  description: t('disclaimerSeoDesc'),
   path: '/disclaimer',
 })
 </script>
@@ -12,8 +12,8 @@ usePageSeo({
   <AppContainer class="space-y-8 py-12 sm:py-16">
     <PageHero
       eyebrow="Disclaimer"
-      title="免责声明"
-      :description="SITE_DISCLAIMER"
+      :title="t('disclaimerTitle')"
+      :description="t('siteDisclaimer')"
     />
   </AppContainer>
 </template>

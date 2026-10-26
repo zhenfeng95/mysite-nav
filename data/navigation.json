@@ -16,7 +16,8 @@
                     "tags": ["AI", "对话"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/chatgpt.ico"
+                    "iconUrl": "/icons/sites/chatgpt.ico",
+                    "descriptionEn": "From OpenAI — a leading AI assistant"
                 },
                 {
                     "id": "claude",
@@ -26,7 +27,8 @@
                     "tags": ["AI", "对话"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/claude.png"
+                    "iconUrl": "/icons/sites/claude.png",
+                    "descriptionEn": "From Anthropic — strong at long docs & code"
                 },
                 {
                     "id": "gemini",
@@ -36,7 +38,8 @@
                     "tags": ["AI", "对话"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/gemini.png"
+                    "iconUrl": "/icons/sites/gemini.png",
+                    "descriptionEn": "Google’s multimodal AI assistant"
                 },
                 {
                     "id": "deepseek",
@@ -47,7 +50,8 @@
                     "tags": ["AI", "对话"],
                     "officialUrlConfirmed": true,
                     "featured": true,
-                    "updatedAt": "2026-10-12"
+                    "updatedAt": "2026-10-12",
+                    "descriptionEn": "DeepSeek — high-performance open models"
                 },
                 {
                     "id": "kimi",
@@ -57,7 +61,8 @@
                     "tags": ["AI", "对话"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/kimi.ico"
+                    "iconUrl": "/icons/sites/kimi.ico",
+                    "descriptionEn": "Moonshot — ultra-long context assistant"
                 },
                 {
                     "id": "doubao",
@@ -67,7 +72,9 @@
                     "tags": ["AI", "对话"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/doubao.png"
+                    "iconUrl": "/icons/sites/doubao.png",
+                    "nameEn": "Doubao",
+                    "descriptionEn": "ByteDance AI assistant"
                 },
                 {
                     "id": "tongyi",
@@ -77,7 +84,9 @@
                     "iconUrl": "/icons/sites/tongyi.svg",
                     "tags": ["AI", "对话"],
                     "officialUrlConfirmed": true,
-                    "updatedAt": "2026-10-12"
+                    "updatedAt": "2026-10-12",
+                    "nameEn": "Tongyi Qianwen",
+                    "descriptionEn": "Alibaba Cloud Tongyi chat"
                 },
                 {
                     "id": "cursor",
@@ -87,9 +96,13 @@
                     "tags": ["AI", "开发"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/cursor.ico"
+                    "iconUrl": "/icons/sites/cursor.ico",
+                    "descriptionEn": "AI code editor for local projects"
                 }
-            ]
+            ],
+            "nameEn": "AI",
+            "fullNameEn": "Popular AI products & developer entry points",
+            "descriptionEn": "Chat, writing, image, and developer AI products — official sites and docs."
         },
         {
             "id": "dev",
@@ -108,7 +121,8 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/github.ico"
+                    "iconUrl": "/icons/sites/github.ico",
+                    "descriptionEn": "The world’s largest code hosting platform"
                 },
                 {
                     "id": "gitee",
@@ -118,7 +132,8 @@
                     "tags": ["开发", "协作"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/gitee.ico"
+                    "iconUrl": "/icons/sites/gitee.ico",
+                    "descriptionEn": "Code hosting popular in China"
                 },
                 {
                     "id": "npm",
@@ -128,7 +143,8 @@
                     "tags": ["开发", "包管理"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/npm.png"
+                    "iconUrl": "/icons/sites/npm.png",
+                    "descriptionEn": "JavaScript packages and docs"
                 },
                 {
                     "id": "cloudflare",
@@ -138,7 +154,8 @@
                     "tags": ["开发", "部署"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/cloudflare.ico"
+                    "iconUrl": "/icons/sites/cloudflare.ico",
+                    "descriptionEn": "Global CDN, DNS & edge compute"
                 },
                 {
                     "id": "tencent-cloud",
@@ -149,7 +166,9 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/tencent-cloud.png"
+                    "iconUrl": "/icons/sites/tencent-cloud.png",
+                    "nameEn": "Tencent Cloud",
+                    "descriptionEn": "Tencent Cloud services console"
                 },
                 {
                     "id": "aliyun",
@@ -160,7 +179,9 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/aliyun.png"
+                    "iconUrl": "/icons/sites/aliyun.png",
+                    "nameEn": "Alibaba Cloud",
+                    "descriptionEn": "Alibaba Cloud services console"
                 },
                 {
                     "id": "stackoverflow",
@@ -170,7 +191,8 @@
                     "tags": ["开发", "问答"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/stackoverflow.ico"
+                    "iconUrl": "/icons/sites/stackoverflow.ico",
+                    "descriptionEn": "Developer Q&A community"
                 },
                 {
                     "id": "mdn",
@@ -180,7 +202,8 @@
                     "tags": ["开发", "文档"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/mdn.ico"
+                    "iconUrl": "/icons/sites/mdn.ico",
+                    "descriptionEn": "Authoritative Web technology docs"
                 },
                 {
                     "id": "w3school",
@@ -190,7 +213,8 @@
                     "tags": ["开发", "文档"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/w3school.png"
+                    "iconUrl": "/icons/sites/w3school.png",
+                    "descriptionEn": "Web frontend tutorials & reference"
                 },
                 {
                     "id": "csdn",
@@ -200,7 +224,8 @@
                     "tags": ["开发", "社区"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/csdn.ico"
+                    "iconUrl": "/icons/sites/csdn.ico",
+                    "descriptionEn": "Chinese developer tech community"
                 },
                 {
                     "id": "juejin",
@@ -210,7 +235,9 @@
                     "tags": ["开发", "社区"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/juejin.ico"
+                    "iconUrl": "/icons/sites/juejin.ico",
+                    "nameEn": "Juejin",
+                    "descriptionEn": "Quality Chinese tech content"
                 },
                 {
                     "id": "linux-cmd",
@@ -220,9 +247,14 @@
                     "tags": ["开发", "Linux", "文档"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/linux-cmd.png"
+                    "iconUrl": "/icons/sites/linux-cmd.png",
+                    "nameEn": "Linux Commands",
+                    "descriptionEn": "Linux command quick reference"
                 }
-            ]
+            ],
+            "nameEn": "Dev",
+            "fullNameEn": "Developer & collaboration sites",
+            "descriptionEn": "Code hosting, docs, packages, and deployment."
         },
         {
             "id": "productivity",
@@ -241,7 +273,8 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/notion.png"
+                    "iconUrl": "/icons/sites/notion.png",
+                    "descriptionEn": "All-in-one notes & knowledge base"
                 },
                 {
                     "id": "linear",
@@ -251,7 +284,8 @@
                     "tags": ["效率", "任务"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/linear.ico"
+                    "iconUrl": "/icons/sites/linear.ico",
+                    "descriptionEn": "Clean, fast project management"
                 },
                 {
                     "id": "feishu",
@@ -262,7 +296,9 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/feishu.ico"
+                    "iconUrl": "/icons/sites/feishu.ico",
+                    "nameEn": "Feishu",
+                    "descriptionEn": "All-in-one work suite & docs"
                 },
                 {
                     "id": "yuque",
@@ -272,7 +308,9 @@
                     "tags": ["效率", "文档"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/yuque.png"
+                    "iconUrl": "/icons/sites/yuque.png",
+                    "nameEn": "Yuque",
+                    "descriptionEn": "Knowledge base & doc collaboration"
                 },
                 {
                     "id": "wolai",
@@ -282,7 +320,9 @@
                     "tags": ["效率", "笔记"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/wolai.png"
+                    "iconUrl": "/icons/sites/wolai.png",
+                    "nameEn": "Wolai",
+                    "descriptionEn": "Flexible collaborative notes"
                 },
                 {
                     "id": "processon",
@@ -292,9 +332,13 @@
                     "tags": ["效率", "绘图"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/processon.ico"
+                    "iconUrl": "/icons/sites/processon.ico",
+                    "descriptionEn": "Online flowcharts & mind maps"
                 }
-            ]
+            ],
+            "nameEn": "Productivity",
+            "fullNameEn": "Notes, collaboration & productivity",
+            "descriptionEn": "Writing, tasks, and knowledge tools for everyday work."
         },
         {
             "id": "invest",
@@ -313,9 +357,13 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-26",
-                    "iconUrl": "/icons/sites/zheninvest.png"
+                    "iconUrl": "/icons/sites/zheninvest.png",
+                    "descriptionEn": "HK/US stocks & cross-border investing, made simpler"
                 }
-            ]
+            ],
+            "nameEn": "Invest",
+            "fullNameEn": "HK/US stocks & cross-border investing",
+            "descriptionEn": "Cross-border investing guides, account opening, and overseas resources."
         },
         {
             "id": "design",
@@ -334,7 +382,8 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/figma.ico"
+                    "iconUrl": "/icons/sites/figma.ico",
+                    "descriptionEn": "Collaborative interface design"
                 },
                 {
                     "id": "lucide",
@@ -344,7 +393,8 @@
                     "tags": ["设计", "图标"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/lucide.ico"
+                    "iconUrl": "/icons/sites/lucide.ico",
+                    "descriptionEn": "Clean open-source icon set"
                 },
                 {
                     "id": "iconfont",
@@ -354,7 +404,8 @@
                     "tags": ["设计", "图标"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/iconfont.svg"
+                    "iconUrl": "/icons/sites/iconfont.svg",
+                    "descriptionEn": "Alibaba vector icon library"
                 },
                 {
                     "id": "unsplash",
@@ -364,7 +415,8 @@
                     "tags": ["设计", "图片"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/unsplash.ico"
+                    "iconUrl": "/icons/sites/unsplash.ico",
+                    "descriptionEn": "Free high-quality photo library"
                 },
                 {
                     "id": "dribbble",
@@ -374,7 +426,8 @@
                     "tags": ["设计", "灵感"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/dribbble.png"
+                    "iconUrl": "/icons/sites/dribbble.png",
+                    "descriptionEn": "Design inspiration & portfolio community"
                 },
                 {
                     "id": "coolors",
@@ -384,9 +437,13 @@
                     "tags": ["设计", "配色"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/coolors.png"
+                    "iconUrl": "/icons/sites/coolors.png",
+                    "descriptionEn": "Generate color palettes fast"
                 }
-            ]
+            ],
+            "nameEn": "Design",
+            "fullNameEn": "Design & asset tools",
+            "descriptionEn": "UI design, icons, and collaborative design tools."
         },
         {
             "id": "social",
@@ -405,7 +462,9 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/weibo.ico"
+                    "iconUrl": "/icons/sites/weibo.ico",
+                    "nameEn": "Weibo",
+                    "descriptionEn": "News & social network"
                 },
                 {
                     "id": "zhihu",
@@ -416,7 +475,9 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/zhihu.ico"
+                    "iconUrl": "/icons/sites/zhihu.ico",
+                    "nameEn": "Zhihu",
+                    "descriptionEn": "Chinese Q&A community"
                 },
                 {
                     "id": "bilibili",
@@ -427,7 +488,9 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/bilibili.ico"
+                    "iconUrl": "/icons/sites/bilibili.ico",
+                    "nameEn": "Bilibili",
+                    "descriptionEn": "Video & danmaku community"
                 },
                 {
                     "id": "xiaohongshu",
@@ -437,7 +500,9 @@
                     "tags": ["社交"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/xiaohongshu.ico"
+                    "iconUrl": "/icons/sites/xiaohongshu.ico",
+                    "nameEn": "Xiaohongshu",
+                    "descriptionEn": "Lifestyle & discovery community"
                 },
                 {
                     "id": "gmail",
@@ -447,7 +512,8 @@
                     "tags": ["社交", "邮箱"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/gmail.png"
+                    "iconUrl": "/icons/sites/gmail.png",
+                    "descriptionEn": "Google Mail — simple and fast"
                 },
                 {
                     "id": "outlook",
@@ -457,9 +523,13 @@
                     "tags": ["社交", "邮箱"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/outlook.png"
+                    "iconUrl": "/icons/sites/outlook.png",
+                    "descriptionEn": "Microsoft Mail & calendar"
                 }
-            ]
+            ],
+            "nameEn": "Social",
+            "fullNameEn": "Social & content platforms",
+            "descriptionEn": "Social networks, Q&A, and email."
         },
         {
             "id": "tools",
@@ -478,7 +548,9 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/translate.png"
+                    "iconUrl": "/icons/sites/translate.png",
+                    "nameEn": "Google Translate",
+                    "descriptionEn": "Multilingual online translation"
                 },
                 {
                     "id": "youdao",
@@ -488,7 +560,9 @@
                     "tags": ["工具", "翻译"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/youdao.ico"
+                    "iconUrl": "/icons/sites/youdao.ico",
+                    "nameEn": "Youdao Translate",
+                    "descriptionEn": "NetEase Youdao translation"
                 },
                 {
                     "id": "jsonformatter",
@@ -498,7 +572,9 @@
                     "tags": ["工具", "开发"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/jsonformatter.png"
+                    "iconUrl": "/icons/sites/jsonformatter.png",
+                    "nameEn": "JSON Formatter",
+                    "descriptionEn": "Validate & beautify JSON online"
                 },
                 {
                     "id": "regex101",
@@ -508,7 +584,8 @@
                     "tags": ["工具", "开发"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/regex101.ico"
+                    "iconUrl": "/icons/sites/regex101.ico",
+                    "descriptionEn": "Test and debug regular expressions"
                 },
                 {
                     "id": "ipip",
@@ -518,7 +595,9 @@
                     "tags": ["工具", "网络"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/ipip.ico"
+                    "iconUrl": "/icons/sites/ipip.ico",
+                    "nameEn": "IP Lookup",
+                    "descriptionEn": "Accurate IP geolocation lookup"
                 },
                 {
                     "id": "itdog",
@@ -528,7 +607,8 @@
                     "tags": ["工具", "网络"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-21",
-                    "iconUrl": "/icons/sites/itdog.ico"
+                    "iconUrl": "/icons/sites/itdog.ico",
+                    "descriptionEn": "Online ping, speed test & traceroute"
                 },
                 {
                     "id": "tinypng",
@@ -538,7 +618,8 @@
                     "tags": ["工具", "图片"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/tinypng.ico"
+                    "iconUrl": "/icons/sites/tinypng.ico",
+                    "descriptionEn": "Smart PNG & JPEG compression"
                 },
                 {
                     "id": "squoosh",
@@ -548,7 +629,8 @@
                     "tags": ["工具", "图片"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-14",
-                    "iconUrl": "/icons/sites/squoosh.png"
+                    "iconUrl": "/icons/sites/squoosh.png",
+                    "descriptionEn": "In-browser local image compression"
                 },
                 {
                     "id": "cli-im",
@@ -558,7 +640,9 @@
                     "tags": ["工具", "二维码"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-14",
-                    "iconUrl": "/icons/sites/cli-im.ico"
+                    "iconUrl": "/icons/sites/cli-im.ico",
+                    "nameEn": "Cli.im QR",
+                    "descriptionEn": "Create and manage QR codes online"
                 },
                 {
                     "id": "markdown-cn-editor",
@@ -568,9 +652,14 @@
                     "tags": ["工具", "写作"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-14",
-                    "iconUrl": "/icons/sites/markdown-cn-editor.ico"
+                    "iconUrl": "/icons/sites/markdown-cn-editor.ico",
+                    "nameEn": "Markdown Editor",
+                    "descriptionEn": "Online Markdown edit & preview"
                 }
-            ]
+            ],
+            "nameEn": "Tools",
+            "fullNameEn": "Handy online tools",
+            "descriptionEn": "Translate, lookup, and formatting utilities."
         },
         {
             "id": "storage",
@@ -589,7 +678,9 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/baidu-pan.png"
+                    "iconUrl": "/icons/sites/baidu-pan.png",
+                    "nameEn": "Baidu Netdisk",
+                    "descriptionEn": "Baidu cloud storage & sync"
                 },
                 {
                     "id": "aliyun-pan",
@@ -600,7 +691,9 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/aliyun-pan.png"
+                    "iconUrl": "/icons/sites/aliyun-pan.png",
+                    "nameEn": "Aliyun Drive",
+                    "descriptionEn": "Cloud storage without speed caps"
                 },
                 {
                     "id": "quark-pan",
@@ -611,7 +704,9 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/quark-pan.ico"
+                    "iconUrl": "/icons/sites/quark-pan.ico",
+                    "nameEn": "Quark Drive",
+                    "descriptionEn": "Quark cloud file storage"
                 },
                 {
                     "id": "xunlei-pan",
@@ -621,7 +716,9 @@
                     "tags": ["网盘", "存储"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/xunlei-pan.png"
+                    "iconUrl": "/icons/sites/xunlei-pan.png",
+                    "nameEn": "Xunlei Cloud",
+                    "descriptionEn": "Xunlei cloud file storage"
                 },
                 {
                     "id": "tianyi-pan",
@@ -631,7 +728,9 @@
                     "tags": ["网盘", "存储"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/tianyi-pan.png"
+                    "iconUrl": "/icons/sites/tianyi-pan.png",
+                    "nameEn": "Tianyi Cloud",
+                    "descriptionEn": "China Telecom cloud drive"
                 },
                 {
                     "id": "uc-pan",
@@ -641,7 +740,9 @@
                     "tags": ["网盘", "存储"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/uc-pan.svg"
+                    "iconUrl": "/icons/sites/uc-pan.svg",
+                    "nameEn": "UC Drive",
+                    "descriptionEn": "UC cloud file storage"
                 },
                 {
                     "id": "lanzou-pan",
@@ -651,7 +752,9 @@
                     "tags": ["网盘", "存储"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/lanzou-pan.svg"
+                    "iconUrl": "/icons/sites/lanzou-pan.svg",
+                    "nameEn": "Lanzou Cloud",
+                    "descriptionEn": "Lightweight file sharing & storage"
                 },
                 {
                     "id": "onedrive",
@@ -661,9 +764,13 @@
                     "tags": ["网盘", "存储"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/onedrive.png"
+                    "iconUrl": "/icons/sites/onedrive.png",
+                    "descriptionEn": "Microsoft cloud storage"
                 }
-            ]
+            ],
+            "nameEn": "Storage",
+            "fullNameEn": "Cloud drives & storage",
+            "descriptionEn": "Baidu, Aliyun, Quark, Thunder, Tianyi, UC, Lanzou, OneDrive, and more."
         },
         {
             "id": "video",
@@ -682,7 +789,9 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/tencent-video.png"
+                    "iconUrl": "/icons/sites/tencent-video.png",
+                    "nameEn": "Tencent Video",
+                    "descriptionEn": "Tencent streaming movies & shows"
                 },
                 {
                     "id": "youku",
@@ -693,7 +802,9 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/youku.ico"
+                    "iconUrl": "/icons/sites/youku.ico",
+                    "nameEn": "Youku",
+                    "descriptionEn": "Youku online video"
                 },
                 {
                     "id": "iqiyi",
@@ -704,7 +815,9 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/iqiyi.ico"
+                    "iconUrl": "/icons/sites/iqiyi.ico",
+                    "nameEn": "iQiyi",
+                    "descriptionEn": "iQiyi movies & shows"
                 },
                 {
                     "id": "bilibili-video",
@@ -714,7 +827,9 @@
                     "tags": ["影视", "视频"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/bilibili.ico"
+                    "iconUrl": "/icons/sites/bilibili.ico",
+                    "nameEn": "Bilibili",
+                    "descriptionEn": "Videos, anime & live on Bilibili"
                 },
                 {
                     "id": "cctv",
@@ -724,7 +839,9 @@
                     "tags": ["影视", "直播"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/cctv.jpg"
+                    "iconUrl": "/icons/sites/cctv.jpg",
+                    "nameEn": "CCTV Live",
+                    "descriptionEn": "CCTV live & program catch-up"
                 },
                 {
                     "id": "douyin",
@@ -734,7 +851,9 @@
                     "tags": ["影视", "短视频"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/douyin.png"
+                    "iconUrl": "/icons/sites/douyin.png",
+                    "nameEn": "Douyin Web",
+                    "descriptionEn": "Douyin short video on the web"
                 },
                 {
                     "id": "kuaishou",
@@ -744,7 +863,9 @@
                     "tags": ["影视", "短视频"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/kuaishou.svg"
+                    "iconUrl": "/icons/sites/kuaishou.svg",
+                    "nameEn": "Kuaishou Web",
+                    "descriptionEn": "Kuaishou short video on the web"
                 },
                 {
                     "id": "huya",
@@ -754,7 +875,9 @@
                     "tags": ["影视", "直播"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/huya.png"
+                    "iconUrl": "/icons/sites/huya.png",
+                    "nameEn": "Huya Live",
+                    "descriptionEn": "Huya gaming & entertainment live"
                 },
                 {
                     "id": "douyu",
@@ -764,7 +887,9 @@
                     "tags": ["影视", "直播"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/douyu.ico"
+                    "iconUrl": "/icons/sites/douyu.ico",
+                    "nameEn": "Douyu Live",
+                    "descriptionEn": "Douyu gaming & entertainment live"
                 },
                 {
                     "id": "egame-qq",
@@ -774,9 +899,14 @@
                     "tags": ["影视", "电竞"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/egame-qq.svg"
+                    "iconUrl": "/icons/sites/egame-qq.svg",
+                    "nameEn": "Penguin eSports",
+                    "descriptionEn": "Tencent Penguin eSports live"
                 }
-            ]
+            ],
+            "nameEn": "Video",
+            "fullNameEn": "Video, live & short video",
+            "descriptionEn": "Streaming, live, and short-video platforms."
         },
         {
             "id": "music",
@@ -795,7 +925,9 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/netease-music.svg"
+                    "iconUrl": "/icons/sites/netease-music.svg",
+                    "nameEn": "NetEase Cloud Music",
+                    "descriptionEn": "Discover and share great music"
                 },
                 {
                     "id": "qq-music",
@@ -806,7 +938,9 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/qq-music.svg"
+                    "iconUrl": "/icons/sites/qq-music.svg",
+                    "nameEn": "QQ Music",
+                    "descriptionEn": "Huge catalog — listen your way"
                 },
                 {
                     "id": "kugou",
@@ -816,9 +950,14 @@
                     "tags": ["音乐"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/kugou.svg"
+                    "iconUrl": "/icons/sites/kugou.svg",
+                    "nameEn": "Kugou Music",
+                    "descriptionEn": "Kugou online music"
                 }
-            ]
+            ],
+            "nameEn": "Music",
+            "fullNameEn": "Online music",
+            "descriptionEn": "NetEase Cloud Music, QQ Music, Kugou, and more."
         },
         {
             "id": "analytics",
@@ -837,7 +976,8 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/51la.ico"
+                    "iconUrl": "/icons/sites/51la.ico",
+                    "descriptionEn": "51.la — popular PV/UV site stats"
                 },
                 {
                     "id": "baidu-tongji",
@@ -848,7 +988,9 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/baidu-tongji.ico"
+                    "iconUrl": "/icons/sites/baidu-tongji.ico",
+                    "nameEn": "Baidu Analytics",
+                    "descriptionEn": "Baidu official site traffic analytics"
                 },
                 {
                     "id": "umeng",
@@ -859,7 +1001,9 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/umeng.ico"
+                    "iconUrl": "/icons/sites/umeng.ico",
+                    "nameEn": "Umeng+",
+                    "descriptionEn": "App & site analytics (ex-CNZZ)"
                 },
                 {
                     "id": "google-analytics",
@@ -870,7 +1014,8 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/google-analytics.png"
+                    "iconUrl": "/icons/sites/google-analytics.png",
+                    "descriptionEn": "Google site & app analytics"
                 },
                 {
                     "id": "microsoft-clarity",
@@ -880,7 +1025,8 @@
                     "tags": ["统计", "热力图"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/microsoft-clarity.ico"
+                    "iconUrl": "/icons/sites/microsoft-clarity.ico",
+                    "descriptionEn": "Free heatmaps & session replay"
                 },
                 {
                     "id": "cloudflare-analytics",
@@ -890,7 +1036,8 @@
                     "tags": ["统计", "PV"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/cloudflare-analytics.ico"
+                    "iconUrl": "/icons/sites/cloudflare-analytics.ico",
+                    "descriptionEn": "Privacy-friendly free web analytics"
                 },
                 {
                     "id": "matomo",
@@ -900,7 +1047,8 @@
                     "tags": ["统计", "开源"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/matomo.png"
+                    "iconUrl": "/icons/sites/matomo.png",
+                    "descriptionEn": "Open-source, self-hostable analytics"
                 },
                 {
                     "id": "plausible",
@@ -910,7 +1058,8 @@
                     "tags": ["统计", "隐私"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/plausible.ico"
+                    "iconUrl": "/icons/sites/plausible.ico",
+                    "descriptionEn": "Lightweight, privacy-friendly analytics"
                 },
                 {
                     "id": "hotjar",
@@ -920,7 +1069,8 @@
                     "tags": ["统计", "热力图"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/hotjar.ico"
+                    "iconUrl": "/icons/sites/hotjar.ico",
+                    "descriptionEn": "Heatmaps, recordings & feedback"
                 },
                 {
                     "id": "sensorsdata",
@@ -930,7 +1080,9 @@
                     "tags": ["统计", "行为分析"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/sensorsdata.ico"
+                    "iconUrl": "/icons/sites/sensorsdata.ico",
+                    "nameEn": "Sensors Data",
+                    "descriptionEn": "User behavior & data ops platform"
                 },
                 {
                     "id": "growingio",
@@ -940,7 +1092,8 @@
                     "tags": ["统计", "增长"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/growingio.ico"
+                    "iconUrl": "/icons/sites/growingio.ico",
+                    "descriptionEn": "Growth analytics & user insights"
                 },
                 {
                     "id": "volcengine-datafinder",
@@ -950,7 +1103,9 @@
                     "tags": ["统计", "增长"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/volcengine-datafinder.png"
+                    "iconUrl": "/icons/sites/volcengine-datafinder.png",
+                    "nameEn": "Volcengine DataFinder",
+                    "descriptionEn": "ByteDance growth analytics"
                 },
                 {
                     "id": "mixpanel",
@@ -960,7 +1115,8 @@
                     "tags": ["统计", "产品分析"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/mixpanel.ico"
+                    "iconUrl": "/icons/sites/mixpanel.ico",
+                    "descriptionEn": "Product events & user analytics"
                 },
                 {
                     "id": "amplitude",
@@ -970,7 +1126,8 @@
                     "tags": ["统计", "产品分析"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/amplitude.ico"
+                    "iconUrl": "/icons/sites/amplitude.ico",
+                    "descriptionEn": "Product growth & user analytics"
                 },
                 {
                     "id": "cnzz",
@@ -980,9 +1137,13 @@
                     "tags": ["统计", "PV", "UV"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/cnzz.ico"
+                    "iconUrl": "/icons/sites/cnzz.ico",
+                    "descriptionEn": "Classic webmaster stats (now Umeng+)"
                 }
-            ]
+            ],
+            "nameEn": "Analytics",
+            "fullNameEn": "Site analytics (PV / UV)",
+            "descriptionEn": "Traffic, visitors, and behavior analytics tools."
         },
         {
             "id": "webmaster",
@@ -1001,7 +1162,9 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/baidu-ziyuan.ico"
+                    "iconUrl": "/icons/sites/baidu-ziyuan.ico",
+                    "nameEn": "Baidu Webmaster",
+                    "descriptionEn": "Baidu search submit & indexing"
                 },
                 {
                     "id": "google-search-console",
@@ -1012,7 +1175,8 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/google-search-console.png"
+                    "iconUrl": "/icons/sites/google-search-console.png",
+                    "descriptionEn": "Google search performance & indexing"
                 },
                 {
                     "id": "bing-webmaster",
@@ -1023,7 +1187,9 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/bing-webmaster.ico"
+                    "iconUrl": "/icons/sites/bing-webmaster.ico",
+                    "nameEn": "Bing Webmaster",
+                    "descriptionEn": "Bing Webmaster Tools & sitemaps"
                 },
                 {
                     "id": "sogou-webmaster",
@@ -1034,7 +1200,9 @@
                     "officialUrlConfirmed": true,
                     "featured": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/sogou-webmaster.ico"
+                    "iconUrl": "/icons/sites/sogou-webmaster.ico",
+                    "nameEn": "Sogou Webmaster",
+                    "descriptionEn": "Sogou search resource platform"
                 },
                 {
                     "id": "360-webmaster",
@@ -1044,7 +1212,9 @@
                     "tags": ["站长", "收录"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/360-webmaster.ico"
+                    "iconUrl": "/icons/sites/360-webmaster.ico",
+                    "nameEn": "360 Webmaster",
+                    "descriptionEn": "360 Search webmaster tools"
                 },
                 {
                     "id": "shenma-webmaster",
@@ -1054,7 +1224,9 @@
                     "tags": ["站长", "收录"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/shenma-webmaster.png"
+                    "iconUrl": "/icons/sites/shenma-webmaster.png",
+                    "nameEn": "Shenma Webmaster",
+                    "descriptionEn": "Shenma search webmaster tools"
                 },
                 {
                     "id": "toutiao-webmaster",
@@ -1064,7 +1236,9 @@
                     "tags": ["站长", "收录"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/toutiao-webmaster.ico"
+                    "iconUrl": "/icons/sites/toutiao-webmaster.ico",
+                    "nameEn": "Toutiao Webmaster",
+                    "descriptionEn": "Toutiao search resource platform"
                 },
                 {
                     "id": "yandex-webmaster",
@@ -1074,7 +1248,8 @@
                     "tags": ["站长", "收录"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/yandex-webmaster.ico"
+                    "iconUrl": "/icons/sites/yandex-webmaster.ico",
+                    "descriptionEn": "Yandex Webmaster Tools"
                 },
                 {
                     "id": "tool-chinaz",
@@ -1084,7 +1259,9 @@
                     "tags": ["站长", "SEO"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/tool-chinaz.ico"
+                    "iconUrl": "/icons/sites/tool-chinaz.ico",
+                    "nameEn": "Chinaz Tools",
+                    "descriptionEn": "Rank check & SEO toolkit"
                 },
                 {
                     "id": "aizhan",
@@ -1094,7 +1271,9 @@
                     "tags": ["站长", "SEO"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/aizhan.ico"
+                    "iconUrl": "/icons/sites/aizhan.ico",
+                    "nameEn": "Aizhan",
+                    "descriptionEn": "Rank, backlinks & site lookup"
                 },
                 {
                     "id": "5118",
@@ -1104,7 +1283,8 @@
                     "tags": ["站长", "SEO"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/5118.ico"
+                    "iconUrl": "/icons/sites/5118.ico",
+                    "descriptionEn": "Keyword research & SEO data"
                 },
                 {
                     "id": "seores",
@@ -1114,9 +1294,14 @@
                     "tags": ["站长", "社区"],
                     "officialUrlConfirmed": true,
                     "updatedAt": "2026-10-12",
-                    "iconUrl": "/icons/sites/seores.ico"
+                    "iconUrl": "/icons/sites/seores.ico",
+                    "nameEn": "Admin5",
+                    "descriptionEn": "Webmaster community & resources"
                 }
-            ]
+            ],
+            "nameEn": "Webmaster",
+            "fullNameEn": "Search webmaster & indexing",
+            "descriptionEn": "Search Console, sitemaps, and indexing tools."
         }
     ]
 }

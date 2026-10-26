@@ -1,3 +1,4 @@
+import { searchEngineI18n } from '~/locales/messages'
 import { getFaviconCandidates } from '~/utils/favicon'
 
 export interface SearchEngine {
@@ -9,85 +10,77 @@ export interface SearchEngine {
   accentClass?: string
 }
 
-export const HOME_SEARCH_ENGINES: SearchEngine[] = [
+const HOME_SEARCH_ENGINE_DEFS: Array<Omit<SearchEngine, 'name' | 'placeholder'> & { id: string }> = [
   {
     id: 'baidu',
-    name: '百度',
     domain: 'www.baidu.com',
     queryUrl: 'https://www.baidu.com/s?wd=',
-    placeholder: '输入关键词搜索…',
   },
   {
     id: 'google',
-    name: 'Google',
     domain: 'www.google.com',
     queryUrl: 'https://www.google.com/search?q=',
-    placeholder: 'Search Google',
   },
   {
     id: 'bing',
-    name: '必应',
     domain: 'www.bing.com',
     queryUrl: 'https://www.bing.com/search?q=',
-    placeholder: '用必应搜索',
   },
   {
     id: 'duckduckgo',
-    name: 'DuckDuckGo',
     domain: 'duckduckgo.com',
     queryUrl: 'https://duckduckgo.com/?q=',
-    placeholder: 'Search privately',
   },
   {
     id: 'sogou',
-    name: '搜狗',
     domain: 'www.sogou.com',
     queryUrl: 'https://www.sogou.com/web?query=',
-    placeholder: '搜狗搜索',
   },
   {
     id: 'zhihu',
-    name: '知乎搜索',
     domain: 'www.zhihu.com',
     queryUrl: 'https://www.zhihu.com/search?type=content&q=',
-    placeholder: '在知乎搜索内容',
     accentClass: 'text-sky-600',
   },
   {
     id: 'bilibili',
-    name: '哔哩哔哩',
     domain: 'www.bilibili.com',
     queryUrl: 'https://search.bilibili.com/all?keyword=',
-    placeholder: '搜索哔哩哔哩视频',
     accentClass: 'text-pink-500',
   },
   {
     id: 'weibo',
-    name: '微博搜索',
     domain: 'weibo.com',
     queryUrl: 'https://s.weibo.com/weibo?q=',
-    placeholder: '在微博搜索',
     accentClass: 'text-orange-500',
   },
   {
     id: 'translate',
-    name: '在线翻译',
     domain: 'fanyi.baidu.com',
     queryUrl: 'https://fanyi.baidu.com/#auto/zh/',
-    placeholder: '输入要翻译的文本',
     accentClass: 'text-blue-600',
   },
 ]
 
 export function useHomeSearch() {
-  const activeId = useState<string>('home-search-engine', () => HOME_SEARCH_ENGINES[0]!.id)
+  const { locale } = useAppI18n()
+  const activeId = useState<string>('home-search-engine', () => HOME_SEARCH_ENGINE_DEFS[0]!.id)
   const query = useState<string>('home-search-query', () => '')
   const iconIndexById = useState<Record<string, number>>('home-search-icon-index', () => ({}))
   const assetCdn = useAssetCdn()
 
-  const engines = HOME_SEARCH_ENGINES
+  const engines = computed<SearchEngine[]>(() =>
+    HOME_SEARCH_ENGINE_DEFS.map((def) => {
+      const i18n = searchEngineI18n[def.id]?.[locale.value] ?? searchEngineI18n[def.id]?.zh
+      return {
+        ...def,
+        name: i18n?.name ?? def.id,
+        placeholder: i18n?.placeholder ?? '',
+      }
+    }),
+  )
   const activeEngine = computed(
-    () => engines.find(e => e.id === activeId.value) ?? engines[0]!,
+    () => engines.value.find(e => e.id === activeId.value) ?? engines.value[0]!,
   )
 
   function engineIconCandidates(engine: SearchEngine) {

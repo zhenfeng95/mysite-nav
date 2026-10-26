@@ -12,6 +12,7 @@ const props = defineProps<{
 }>()
 
 const { isOpen, close } = useCategoryDrawer()
+const { t } = useAppI18n()
 
 const activeId = ref(props.items[0]?.id ?? '')
 
@@ -141,7 +142,7 @@ onMounted(() => {
             v-if="isOpen"
             type="button"
             class="fixed inset-0 z-[60] bg-sky-950/50 backdrop-blur-[2px]"
-            aria-label="关闭分类导航"
+            :aria-label="t('closeCategoryNav')"
             @click="close"
           />
         </Transition>
@@ -160,16 +161,16 @@ onMounted(() => {
             class="fixed inset-y-0 left-0 z-[70] flex w-[min(18.5rem,86vw)] flex-col bg-white shadow-2xl shadow-sky-950/30"
             role="dialog"
             aria-modal="true"
-            aria-label="分类导航"
+            :aria-label="t('categoryNav')"
           >
             <div class="flex h-14 shrink-0 items-center justify-between border-b border-zinc-200/80 px-4">
               <p class="text-sm font-semibold text-zinc-800">
-                分类导航
+                {{ t('categoryNav') }}
               </p>
               <button
                 type="button"
                 class="inline-flex h-9 w-9 items-center justify-center rounded-full text-zinc-500 transition hover:bg-zinc-100 hover:text-zinc-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400/50"
-                aria-label="关闭"
+                :aria-label="t('close')"
                 @click="close"
               >
                 <AppIcon
@@ -223,7 +224,7 @@ onMounted(() => {
         class="sticky top-[4.75rem] z-30 max-h-[calc(100svh-5.75rem)] overflow-y-auto rounded-2xl bg-white/95 p-3 shadow-lg shadow-sky-900/10 ring-1 ring-white/80 backdrop-blur-xl"
       >
         <p class="border-b border-zinc-200/80 px-2 pb-2.5 text-sm font-semibold text-zinc-800">
-          分类导航
+          {{ t('categoryNav') }}
         </p>
         <ul class="mt-2 space-y-0.5">
           <li

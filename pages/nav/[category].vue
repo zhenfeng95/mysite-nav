@@ -1,6 +1,11 @@
 <script setup lang="ts">
-import { getNavigationCategory } from '~/utils/navigation'
+import {
+  getNavigationCategory,
+  localizedCategoryDescription,
+  localizedCategoryFullName,
+} from '~/utils/navigation'
 
+const { t, locale } = useAppI18n()
 const route = useRoute()
 const slug = String(route.params.category)
 const category = getNavigationCategory(slug)
@@ -8,36 +13,43 @@ const category = getNavigationCategory(slug)
 if (!category) {
   throw createError({
     statusCode: 404,
-    statusMessage: '分类不存在',
+    statusMessage: t('categoryMissing'),
   })
 }
 
-const displayTitle = category.fullName || category.name
+const displayTitle = computed(() => localizedCategoryFullName(category, locale.value))
+const displayDescription = computed(() => localizedCategoryDescription(category, locale.value))
+const resourceCountLabel = computed(() =>
+  t('resourceCount').replace('{n}', String(category.items.length)),
+)
 
 usePageSeo({
-  title: displayTitle,
-  description: category.description,
+  title: displayTitle.value,
+  description: displayDescription.value,
   path: `/nav/${category.slug}`,
 })
 </script>
 
 <template>
-  <AppContainer v-if="category" class="space-y-12 py-12 sm:py-16">
+  <AppContainer
+    v-if="category"
+    class="space-y-12 py-12 sm:py-16"
+  >
     <div>
       <PageHero
         eyebrow="Category"
         :title="displayTitle"
-        :description="category.description"
+        :description="displayDescription"
       />
       <p class="mt-3 text-sm text-zinc-400">
-        {{ category.items.length }} 个资源
+        {{ resourceCountLabel }}
       </p>
     </div>
 
     <section class="space-y-6">
       <SectionTitle
-        title="资源入口"
-        description="官方与常用站点，不确定的链接会标注待确认。"
+        :title="t('resourceEntries')"
+        :description="t('resourceEntriesDesc')"
       />
       <NavigationList :items="category.items" />
     </section>

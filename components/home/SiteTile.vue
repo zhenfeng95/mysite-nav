@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import type { NavigationItem } from '~/types/navigation'
 import { getFaviconCandidates } from '~/utils/favicon'
+import { localizedItemDescription, localizedItemName } from '~/utils/navigation'
 
 const props = defineProps<{
   item: NavigationItem
 }>()
 
+const { locale } = useAppI18n()
 const assetCdn = useAssetCdn()
 const candidates = computed(() =>
   getFaviconCandidates(props.item.url, 64, props.item.iconUrl, props.item.id, assetCdn.value),
@@ -14,6 +16,8 @@ const candidateIndex = ref(0)
 
 const favicon = computed(() => candidates.value[candidateIndex.value] ?? '')
 const showImage = computed(() => Boolean(favicon.value) && candidateIndex.value < candidates.value.length)
+const displayName = computed(() => localizedItemName(props.item, locale.value))
+const displaySlogan = computed(() => localizedItemDescription(props.item, locale.value))
 
 function onImgError() {
   if (candidateIndex.value < candidates.value.length - 1) {
@@ -48,14 +52,14 @@ function bindImg(el: Element | null) {
         class="flex h-full w-full items-center justify-center bg-gradient-to-br from-sky-500 to-cyan-600 text-base font-semibold text-white"
         aria-hidden="true"
       >
-        {{ item.name.slice(0, 1) }}
+        {{ displayName.slice(0, 1) }}
       </span>
       <img
         v-if="showImage"
         :key="favicon"
         :ref="bindImg"
         :src="favicon"
-        :alt="item.name"
+        :alt="displayName"
         width="48"
         height="48"
         class="absolute inset-0 h-full w-full bg-white object-contain p-1.5"
@@ -68,10 +72,10 @@ function bindImg(el: Element | null) {
 
     <span class="min-w-0 flex-1 text-left">
       <span class="block truncate text-sm font-semibold tracking-tight text-zinc-900 sm:text-[15px]">
-        {{ item.name }}
+        {{ displayName }}
       </span>
       <span class="mt-0.5 block line-clamp-1 text-xs leading-5 text-zinc-500 sm:text-[13px]">
-        {{ item.description }}
+        {{ displaySlogan }}
       </span>
     </span>
   </a>

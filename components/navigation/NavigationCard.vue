@@ -1,11 +1,15 @@
 <script setup lang="ts">
 import type { NavigationItem } from '~/types/navigation'
+import { localizedItemDescription, localizedItemName } from '~/utils/navigation'
 
 const props = defineProps<{
   item: NavigationItem
 }>()
 
+const { t, locale } = useAppI18n()
 const displayTags = computed(() => props.item.tags.slice(0, 2))
+const displayName = computed(() => localizedItemName(props.item, locale.value))
+const displayDescription = computed(() => localizedItemDescription(props.item, locale.value))
 </script>
 
 <template>
@@ -16,13 +20,13 @@ const displayTags = computed(() => props.item.tags.slice(0, 2))
       <div class="min-w-0">
         <div class="flex flex-wrap items-center gap-2">
           <h3 class="text-base font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
-            {{ item.name }}
+            {{ displayName }}
           </h3>
           <span
             v-if="item.featured"
             class="rounded-full border border-zinc-200 px-2 py-0.5 text-[11px] text-zinc-500 dark:border-white/10 dark:text-zinc-400"
           >
-            常用
+            {{ t('featuredBadge') }}
           </span>
         </div>
       </div>
@@ -34,7 +38,7 @@ const displayTags = computed(() => props.item.tags.slice(0, 2))
       </span>
     </div>
     <p class="mt-2 flex-1 text-sm leading-6 text-zinc-500 dark:text-zinc-400">
-      {{ item.description }}
+      {{ displayDescription }}
     </p>
     <div
       v-if="displayTags.length"
@@ -56,14 +60,17 @@ const displayTags = computed(() => props.item.tags.slice(0, 2))
         rel="noreferrer noopener"
         class="inline-flex items-center gap-1.5 text-sm text-zinc-500 transition hover:text-zinc-900 dark:hover:text-zinc-100"
       >
-        访问官网
-        <AppIcon name="external" class="h-3.5 w-3.5" />
+        {{ t('visitOfficial') }}
+        <AppIcon
+          name="external"
+          class="h-3.5 w-3.5"
+        />
       </a>
       <p
         v-else
         class="text-sm text-zinc-400"
       >
-        官网待确认
+        {{ t('officialPending') }}
       </p>
     </div>
   </article>

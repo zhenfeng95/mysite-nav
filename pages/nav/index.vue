@@ -3,9 +3,13 @@ import {
   getGroupedNavigationCategories,
   getNavigationPath,
   getNavigationShortDescription,
+  localizedCategoryName,
+  localizedGroupDescription,
+  localizedGroupTitle,
   navigationGroups,
 } from '~/utils/navigation'
 
+const { t, locale } = useAppI18n()
 const route = useRoute()
 const groups = getGroupedNavigationCategories()
 
@@ -37,8 +41,8 @@ function cardIndex(index: number) {
 }
 
 usePageSeo({
-  title: '全部导航',
-  description: '按分类浏览真途导航：AI、开发、效率与设计等常用站点入口。',
+  title: t('allNavTitle'),
+  description: t('allNavSeoDesc'),
   path: '/nav',
 })
 </script>
@@ -47,8 +51,8 @@ usePageSeo({
   <AppContainer class="space-y-10 py-12 sm:py-16">
     <PageHero
       eyebrow="Navigation"
-      title="全部导航"
-      description="先选主题，再进入分类查看资源整理。"
+      :title="t('allNavTitle')"
+      :description="t('allNavDesc')"
     />
 
     <div class="-mx-4 overflow-x-auto px-4">
@@ -66,14 +70,17 @@ usePageSeo({
               : 'text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white'
           "
         >
-          {{ group.title }}
+          {{ localizedGroupTitle(group, locale) }}
         </NuxtLink>
       </div>
     </div>
 
-    <div v-if="activeGroup" class="space-y-6">
+    <div
+      v-if="activeGroup"
+      class="space-y-6"
+    >
       <p class="text-sm leading-6 text-zinc-500 dark:text-zinc-400">
-        {{ activeGroup.description }}
+        {{ localizedGroupDescription(activeGroup, locale) }}
       </p>
 
       <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
@@ -81,8 +88,8 @@ usePageSeo({
           v-for="(category, index) in activeGroup.categories"
           :key="category.id"
           :index="cardIndex(index)"
-          :title="category.name"
-          :description="getNavigationShortDescription(category.slug)"
+          :title="localizedCategoryName(category, locale)"
+          :description="getNavigationShortDescription(category.slug, locale)"
           :to="getNavigationPath(category.slug)"
         />
       </div>

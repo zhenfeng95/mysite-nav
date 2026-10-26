@@ -4,17 +4,19 @@ import type { CategoryNavItem } from '~/components/home/CategorySideNav.vue'
 import {
   getFeaturedNavigationItems,
   getNavigationCategories,
+  localizedCategoryName,
 } from '~/utils/navigation'
-import { SITE_NAME, SITE_TAGLINE } from '~/utils/site'
 
 definePageMeta({
   layout: 'home',
 })
 
+const { t, locale } = useAppI18n()
+
 useHomeSeo()
 
 const categories = getNavigationCategories()
-const featuredItems = getFeaturedNavigationItems(10)
+const featuredItems = computed(() => getFeaturedNavigationItems(10, locale.value))
 const searchStuck = ref(false)
 const searchInFlow = ref<HTMLElement | null>(null)
 
@@ -28,17 +30,17 @@ const ENTER_LOCK_MS = 320
 
 const navItems = computed<CategoryNavItem[]>(() => {
   const items: CategoryNavItem[] = []
-  if (featuredItems.length) {
+  if (featuredItems.value.length) {
     items.push({
       id: 'section-featured',
-      title: '常用导航',
+      title: t('featured'),
       icon: 'star',
     })
   }
   for (const category of categories) {
     items.push({
       id: `section-${category.slug}`,
-      title: category.name,
+      title: localizedCategoryName(category, locale.value),
       icon: category.icon as IconName,
     })
   }
@@ -108,10 +110,10 @@ onMounted(() => {
     <div class="mx-auto max-w-6xl">
       <header class="mb-8 text-center sm:mb-10">
         <h1 class="text-3xl font-bold tracking-tight text-white drop-shadow-md sm:text-4xl lg:text-5xl">
-          {{ SITE_NAME }}
+          {{ t('siteName') }}
         </h1>
         <p class="mt-2 text-sm text-white/80 sm:text-base">
-          {{ SITE_TAGLINE }}
+          {{ t('siteTagline') }}
         </p>
       </header>
 
@@ -152,7 +154,7 @@ onMounted(() => {
           <CategoryGlass
             v-if="featuredItems.length"
             id="section-featured"
-            title="常用导航"
+            :title="t('featured')"
             icon="star"
             :items="featuredItems"
           />
@@ -161,7 +163,7 @@ onMounted(() => {
             v-for="category in categories"
             :id="`section-${category.slug}`"
             :key="category.id"
-            :title="category.name"
+            :title="localizedCategoryName(category, locale)"
             :icon="category.icon as IconName"
             :items="category.items"
           />

@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { SITE_NAME } from '~/utils/site'
-
 const logoSrc = assetUrl('/logo.png')
+const { t } = useAppI18n()
 </script>
 
 <template>
@@ -17,15 +16,18 @@ const logoSrc = assetUrl('/logo.png')
             width="28"
             class="h-7 w-7 shrink-0 rounded-sm object-cover"
           >
-          <span class="truncate text-sm font-semibold tracking-tight">{{ SITE_NAME }}</span>
+          <span class="truncate text-sm font-semibold tracking-tight">{{ t('siteName') }}</span>
         </NuxtLink>
 
-        <ClientOnly>
-          <ThemeToggle />
-          <template #fallback>
-            <div class="h-9 w-9 rounded-full border border-zinc-200/80 dark:border-white/10" />
-          </template>
-        </ClientOnly>
+        <div class="flex shrink-0 items-center gap-2">
+          <LocaleToggle />
+          <ClientOnly>
+            <ThemeToggle />
+            <template #fallback>
+              <div class="h-9 w-9 rounded-full border border-zinc-200/80 dark:border-white/10" />
+            </template>
+          </ClientOnly>
+        </div>
       </div>
     </AppContainer>
   </header>

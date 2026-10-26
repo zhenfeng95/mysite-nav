@@ -1,21 +1,41 @@
 <script setup lang="ts">
-import { SITE_NAME, SITE_NAME_EN } from '~/utils/site'
+import type { MessageKey } from '~/locales/messages'
+import { SITE_NAME_EN } from '~/utils/site'
+import {
+  getNavigationCategories,
+  localizedCategoryName,
+} from '~/utils/navigation'
 
 definePageMeta({
   layout: false,
 })
 
+const { t, locale } = useAppI18n()
+const toast = useToast()
+
 usePageSeo({
-  title: '申请收录',
-  description: `向 ${SITE_NAME} 提交优质网站，审核通过后将整理进对应分类。`,
+  title: t('applyTitle'),
+  description: t('applySeoDesc'),
   path: '/apply',
 })
 
-const toast = useToast()
 const navBgStyle = computed(() => ({
   backgroundImage: `url('${assetUrl('/images/nav-bg.jpg')}')`,
 }))
-const { data: meta } = await useFetch('/api/submissions/meta')
+
+const categories = computed(() =>
+  getNavigationCategories().map(category => ({
+    slug: category.slug,
+    name: localizedCategoryName(category, locale.value),
+  })),
+)
+
+const guidelines = computed(() => [
+  t('applyGuideline1'),
+  t('applyGuideline2'),
+  t('applyGuideline3'),
+  t('applyGuideline4'),
+])
 
 const form = reactive({
   url: '',
@@ -35,12 +55,36 @@ const iconFileName = ref('')
 const ICON_MAX_BYTES = 1024 * 1024
 const ICON_ACCEPT = 'image/png,image/jpeg,image/gif,image/webp,image/svg+xml,image/x-icon,image/vnd.microsoft.icon,.ico'
 
-const guidelines = [
-  '禁止提交违规违法站点',
-  '页面整洁，无多个弹窗广告和恶意跳转',
-  '非盈利性网站，网站正常访问',
-  '添加本站友链或网站已 ICP 备案优先收录',
-]
+/** Map known Chinese API messages to localized copy on the form. */
+const apiMessageKeys: Record<string, MessageKey> = {
+  '无法访问该地址，请检查链接后重试。': 'applyPrefetchFail',
+  '请填写有效的网站地址。': 'applyNeedUrl',
+  '仅支持 http 或 https 链接。': 'applyNeedUrl',
+  '请填写网站名称。': 'applyNeedName',
+  '请填写网站地址。': 'applyNeedUrl',
+  '请选择有效的分组。': 'applyNeedCategory',
+  '图标文件过大，请压缩后重试（不超过 1MB）。': 'applyIconSizeError',
+  '提交成功，我们会尽快审核。': 'applySubmitOk',
+  '提交失败，请稍后重试。': 'applySubmitFail',
+}
+
+function localizeApiMessage(message?: string, fallbackKey: MessageKey = 'applySubmitFail'): string {
+  if (!message) {
+    return t(fallbackKey)
+  }
+  if (locale.value === 'zh') {
+    return message
+  }
+  const key = apiMessageKeys[message]
+  if (key) {
+    return t(key)
+  }
+  // e.g. 站点返回异常（404）…
+  if (message.startsWith('站点返回异常')) {
+    return t('applyPrefetchFail')
+  }
+  return t(fallbackKey)
+}
 
 function refreshCaptcha() {
   captchaKey.value += 1
@@ -49,29 +93,29 @@ function refreshCaptcha() {
 
 function validateForm(): string | null {
   if (!form.url.trim()) {
-    return '请填写网站链接'
+    return t('applyNeedUrl')
   }
   if (!form.category) {
-    return '请选择分组'
+    return t('applyNeedCategory')
   }
   if (!form.name.trim()) {
-    return '请填写网站名称'
+    return t('applyNeedName')
   }
   if (!form.captcha.trim()) {
-    return '请填写验证码'
+    return t('applyNeedCaptcha')
   }
   return null
 }
 
 async function onPrefetch() {
   if (!form.url.trim()) {
-    toast.error('请先填写网站链接')
+    toast.error(t('applyPrefetchNeedUrl'))
     return
   }
 
   prefetching.value = true
   try {
-    const result = await $fetch<{ name: string; iconUrl: string; url: string }>(
+    const result = await $fetch<{ name: string, iconUrl: string, url: string }>(
       '/api/submissions/prefetch',
       {
         method: 'POST',
@@ -86,11 +130,11 @@ async function onPrefetch() {
       form.iconUrl = result.iconUrl
       iconFileName.value = ''
     }
-    toast.success('已自动获取网站信息')
+    toast.success(t('applyPrefetchOk'))
   }
   catch (error: unknown) {
-    const err = error as { data?: { message?: string }; message?: string }
-    toast.error(err?.data?.message || err?.message || '自动获取失败，请手动填写')
+    const err = error as { data?: { message?: string }, message?: string }
+    toast.error(localizeApiMessage(err?.data?.message || err?.message, 'applyPrefetchFail'))
   }
   finally {
     prefetching.value = false
@@ -110,7 +154,7 @@ function readFileAsDataUrl(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
     const reader = new FileReader()
     reader.onload = () => resolve(String(reader.result || ''))
-    reader.onerror = () => reject(new Error('读取文件失败'))
+    reader.onerror = () => reject(new Error(t('applyFileReadFail')))
     reader.readAsDataURL(file)
   })
 }
@@ -125,12 +169,12 @@ async function onIconFileChange(event: Event) {
   }
 
   if (!file.type.startsWith('image/') && !/\.ico$/i.test(file.name)) {
-    toast.error('请选择图片文件（png / jpg / webp / ico 等）')
+    toast.error(t('applyIconTypeError'))
     return
   }
 
   if (file.size > ICON_MAX_BYTES) {
-    toast.error('图标不能超过 1MB，请压缩后重试')
+    toast.error(t('applyIconSizeError'))
     return
   }
 
@@ -138,10 +182,10 @@ async function onIconFileChange(event: Event) {
     const dataUrl = await readFileAsDataUrl(file)
     form.iconUrl = dataUrl
     iconFileName.value = file.name
-    toast.success('已选择本地图标')
+    toast.success(t('applyIconPicked'))
   }
   catch {
-    toast.error('读取图标失败，请重试')
+    toast.error(t('applyIconReadFail'))
   }
 }
 
@@ -154,11 +198,11 @@ async function onSubmit() {
 
   submitting.value = true
   try {
-    const result = await $fetch<{ ok: boolean; message: string }>('/api/submissions', {
+    await $fetch<{ ok: boolean, message: string }>('/api/submissions', {
       method: 'POST',
       body: { ...form },
     })
-    toast.success(result.message)
+    toast.success(t('applySubmitOk'))
     form.url = ''
     form.category = ''
     form.name = ''
@@ -169,8 +213,8 @@ async function onSubmit() {
     refreshCaptcha()
   }
   catch (error: unknown) {
-    const err = error as { data?: { message?: string }; message?: string }
-    toast.error(err?.data?.message || err?.message || '提交失败，请稍后重试')
+    const err = error as { data?: { message?: string }, message?: string }
+    toast.error(localizeApiMessage(err?.data?.message || err?.message, 'applySubmitFail'))
     refreshCaptcha()
   }
   finally {
@@ -191,15 +235,19 @@ async function onSubmit() {
       aria-hidden="true"
     />
 
+    <div class="absolute right-4 top-4 z-10 sm:right-6 sm:top-6">
+      <LocaleToggle glass />
+    </div>
+
     <div class="mx-auto w-full max-w-2xl">
       <div class="rounded-2xl bg-white/95 px-6 py-8 shadow-[0_20px_50px_rgba(15,23,42,0.18)] backdrop-blur-sm sm:px-10 sm:py-10">
         <h1 class="text-center text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl">
-          申请收录
+          {{ t('applyTitle') }}
         </h1>
 
         <section class="mt-6">
           <h2 class="text-sm font-semibold text-zinc-900">
-            收录说明：
+            {{ t('applyGuidelinesTitle') }}
           </h2>
           <ol class="mt-2 list-decimal space-y-1.5 pl-5 text-sm leading-6 text-zinc-600">
             <li
@@ -221,7 +269,7 @@ async function onSubmit() {
               for="url"
               class="block text-sm font-semibold text-zinc-800"
             >
-              <span class="text-rose-500">*</span>URL链接地址
+              <span class="text-rose-500">*</span>{{ t('applyUrlLabel') }}
             </label>
             <div class="mt-2 flex overflow-hidden rounded-lg border border-zinc-200 focus-within:border-sky-400 focus-within:ring-2 focus-within:ring-sky-200">
               <input
@@ -230,7 +278,7 @@ async function onSubmit() {
                 type="text"
                 maxlength="500"
                 class="min-w-0 flex-1 border-0 bg-transparent px-3 py-2.5 text-sm outline-none"
-                placeholder="完整链接或域名"
+                :placeholder="t('applyUrlPlaceholder')"
               >
               <button
                 type="button"
@@ -238,7 +286,7 @@ async function onSubmit() {
                 :disabled="prefetching"
                 @click="onPrefetch"
               >
-                {{ prefetching ? '获取中' : '自动获取' }}
+                {{ prefetching ? t('applyPrefetching') : t('applyPrefetch') }}
               </button>
             </div>
           </div>
@@ -248,7 +296,7 @@ async function onSubmit() {
               for="category"
               class="block text-sm font-semibold text-zinc-800"
             >
-              <span class="text-rose-500">*</span>选择分组
+              <span class="text-rose-500">*</span>{{ t('applyCategoryLabel') }}
             </label>
             <select
               id="category"
@@ -259,10 +307,10 @@ async function onSubmit() {
                 disabled
                 value=""
               >
-                请选择
+                {{ t('applyCategoryPlaceholder') }}
               </option>
               <option
-                v-for="item in meta?.categories ?? []"
+                v-for="item in categories"
                 :key="item.slug"
                 :value="item.slug"
               >
@@ -276,7 +324,7 @@ async function onSubmit() {
               for="name"
               class="block text-sm font-semibold text-zinc-800"
             >
-              <span class="text-rose-500">*</span>网站名称
+              <span class="text-rose-500">*</span>{{ t('applyNameLabel') }}
             </label>
             <input
               id="name"
@@ -284,10 +332,10 @@ async function onSubmit() {
               type="text"
               maxlength="80"
               class="mt-2 w-full rounded-lg border border-zinc-200 px-3 py-2.5 text-sm outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-200"
-              placeholder="网站名称"
+              :placeholder="t('applyNamePlaceholder')"
             >
             <p class="mt-1.5 text-xs text-zinc-400">
-              填写网站名称
+              {{ t('applyNameHint') }}
             </p>
           </div>
 
@@ -296,7 +344,7 @@ async function onSubmit() {
               for="iconUrl"
               class="block text-sm font-semibold text-zinc-800"
             >
-              网站图标
+              {{ t('applyIconLabel') }}
             </label>
             <div class="mt-2 flex overflow-hidden rounded-lg border border-zinc-200 focus-within:border-sky-400 focus-within:ring-2 focus-within:ring-sky-200">
               <input
@@ -304,7 +352,7 @@ async function onSubmit() {
                 type="text"
                 :value="iconFileName || form.iconUrl"
                 class="min-w-0 flex-1 border-0 bg-transparent px-3 py-2.5 text-sm outline-none"
-                placeholder="填写图标的URL地址，或点击选择上传"
+                :placeholder="t('applyIconPlaceholder')"
                 @input="onIconTextInput"
               >
               <input
@@ -319,14 +367,14 @@ async function onSubmit() {
                 class="shrink-0 border-l border-zinc-200 bg-zinc-50 px-4 text-sm text-sky-700 transition hover:bg-sky-50"
                 @click="onPickIcon"
               >
-                选择
+                {{ t('applyIconPick') }}
               </button>
             </div>
             <p class="mt-1.5 text-xs text-zinc-500">
-              可填图标 URL，或点击「选择」从本地上传（png / jpg / webp / ico，≤1MB）
+              {{ t('applyIconHint') }}
             </p>
             <p class="mt-1 text-xs text-zinc-400">
-              部分网站无法自动获取，请手动填写或上传
+              {{ t('applyIconHintManual') }}
             </p>
             <div
               v-if="form.iconUrl"
@@ -340,7 +388,7 @@ async function onSubmit() {
                 class="h-6 w-6 rounded object-contain"
                 @error="($event.target as HTMLImageElement).style.display = 'none'"
               >
-              <span class="text-xs text-zinc-400">图标预览</span>
+              <span class="text-xs text-zinc-400">{{ t('applyIconPreview') }}</span>
             </div>
           </div>
 
@@ -349,7 +397,7 @@ async function onSubmit() {
               for="captcha"
               class="block text-sm font-semibold text-zinc-800"
             >
-              <span class="text-rose-500">*</span>验证码
+              <span class="text-rose-500">*</span>{{ t('applyCaptchaLabel') }}
             </label>
             <div class="mt-2 flex items-center gap-3">
               <input
@@ -359,19 +407,19 @@ async function onSubmit() {
                 inputmode="numeric"
                 maxlength="8"
                 class="w-36 rounded-lg border border-zinc-200 px-3 py-2.5 text-sm outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-200"
-                placeholder="验证码"
+                :placeholder="t('applyCaptchaPlaceholder')"
                 autocomplete="off"
               >
               <button
                 type="button"
                 class="overflow-hidden rounded-lg border border-zinc-200 bg-zinc-50"
-                title="点击刷新验证码"
+                :title="t('applyCaptchaRefresh')"
                 @click="refreshCaptcha"
               >
                 <img
                   :key="captchaKey"
                   :src="`/api/captcha?t=${captchaKey}`"
-                  alt="验证码"
+                  :alt="t('applyCaptchaAlt')"
                   width="120"
                   height="40"
                   class="h-10 w-[7.5rem]"
@@ -384,7 +432,7 @@ async function onSubmit() {
             class="absolute -left-[9999px] h-0 w-0 overflow-hidden"
             aria-hidden="true"
           >
-            <label for="website">网站</label>
+            <label for="website">{{ t('applyHoneypot') }}</label>
             <input
               id="website"
               v-model="form.website"
@@ -399,7 +447,7 @@ async function onSubmit() {
             class="w-full rounded-lg bg-sky-500 py-3 text-sm font-semibold text-white transition hover:bg-sky-600 disabled:cursor-not-allowed disabled:opacity-60"
             :disabled="submitting"
           >
-            {{ submitting ? '提交中…' : '提交' }}
+            {{ submitting ? t('applySubmitting') : t('applySubmit') }}
           </button>
 
           <div class="pt-2 text-center">
@@ -407,10 +455,10 @@ async function onSubmit() {
               to="/"
               class="text-sm text-zinc-400 transition hover:text-zinc-600"
             >
-              返回首页
+              {{ t('applyBackHome') }}
             </NuxtLink>
             <p class="mt-3 text-xs text-zinc-400">
-              Copyright © 2026 {{ SITE_NAME }}（{{ SITE_NAME_EN }}）. All Rights Reserved.
+              Copyright © 2026 {{ t('siteName') }}（{{ SITE_NAME_EN }}）. All Rights Reserved.
             </p>
           </div>
         </form>

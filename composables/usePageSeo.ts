@@ -1,6 +1,5 @@
 import { buildHomeJsonLd } from '~/utils/jsonld'
 import { isPublicIndexablePath } from '~/utils/seo-index'
-import { homeSeo, SITE_NAME } from '~/utils/site'
 
 export function useJsonLd(key: string, data: unknown) {
   useHead({
@@ -24,9 +23,13 @@ interface PageSeoInput {
 
 export function usePageSeo(input: PageSeoInput) {
   const config = useRuntimeConfig()
+  const { t } = useAppI18n()
   const siteUrl = String(config.public.siteUrl).replace(/\/$/, '')
   const image = input.ogImage ?? `${siteUrl}/og-image.png`
-  const title = input.title.includes(SITE_NAME) ? input.title : `${input.title}｜${SITE_NAME}`
+  const siteName = t('siteName')
+  const title = input.title.includes(siteName) || input.title.includes('真途导航') || input.title.includes('Zhenvia')
+    ? input.title
+    : `${input.title}｜${siteName}`
   const description = input.description
   const indexable = Boolean(input.path && isPublicIndexablePath(input.path))
 
@@ -58,11 +61,25 @@ export function usePageSeo(input: PageSeoInput) {
 export function useHomeSeo() {
   const config = useRuntimeConfig()
   const siteUrl = String(config.public.siteUrl).replace(/\/$/, '')
+  const { t } = useAppI18n()
+  const image = `${siteUrl}/og-image.png`
 
-  usePageSeo({
-    title: homeSeo.title,
-    description: homeSeo.description,
-    path: '/',
+  useSeoMeta({
+    title: () => t('homeSeoTitle'),
+    description: () => t('siteDescription'),
+    ogTitle: () => t('homeSeoTitle'),
+    ogDescription: () => t('siteDescription'),
+    ogImage: image,
+    ogType: 'website',
+    twitterCard: 'summary_large_image',
+    twitterTitle: () => t('homeSeoTitle'),
+    twitterDescription: () => t('siteDescription'),
+    twitterImage: image,
+    robots: 'index, follow',
+  })
+
+  useHead({
+    link: [{ rel: 'canonical', href: `${siteUrl}/` }],
   })
 
   useJsonLd('ld-json-home', buildHomeJsonLd(siteUrl))

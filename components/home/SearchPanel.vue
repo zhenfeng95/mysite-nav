@@ -25,6 +25,7 @@ const {
   submitSearch,
 } = useHomeSearch()
 
+const { t } = useAppI18n()
 const engineMenuOpen = ref(false)
 const isCompact = computed(() => Boolean(props.compact))
 const inputId = computed(() => (isCompact.value ? 'home-search-bar' : 'home-search'))
@@ -143,7 +144,7 @@ function onSelectEngine(id: string) {
         <label
           class="sr-only"
           :for="inputId"
-        >搜索</label>
+        >{{ t('search') }}</label>
         <input
           :id="inputId"
           v-model="query"
@@ -152,13 +153,13 @@ function onSelectEngine(id: string) {
           enterkeyhint="search"
           class="min-w-0 flex-1 bg-transparent px-5 text-zinc-800 outline-none placeholder:text-zinc-400"
           :class="isCompact ? 'py-2.5 text-sm' : 'py-3.5 text-base'"
-          :placeholder="isCompact ? '输入关键词搜索…' : activeEngine.placeholder"
+          :placeholder="isCompact ? t('searchPlaceholder') : activeEngine.placeholder"
         >
         <button
           v-if="!isCompact"
           type="submit"
           class="m-1.5 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-sky-600 text-white transition hover:bg-sky-500"
-          aria-label="搜索"
+          :aria-label="t('search')"
         >
           <AppIcon
             name="search"
@@ -172,7 +173,7 @@ function onSelectEngine(id: string) {
         type="submit"
         class="inline-flex h-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-indigo-500 px-5 text-sm font-semibold text-white shadow-sm transition hover:from-sky-400 hover:to-indigo-400"
       >
-        搜索
+        {{ t('search') }}
       </button>
     </form>
   </div>

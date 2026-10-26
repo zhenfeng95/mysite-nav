@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { SITE_CONTACT_EMAIL, SITE_NAME } from '~/utils/site'
+import { SITE_CONTACT_EMAIL } from '~/utils/site'
+
+const { t } = useAppI18n()
 
 usePageSeo({
-  title: '联系我们',
-  description: `通过邮箱联系 ${SITE_NAME} 站点维护者。`,
+  title: t('contactTitle'),
+  description: t('contactSeoDesc'),
   path: '/contact',
 })
 </script>
@@ -12,11 +14,11 @@ usePageSeo({
   <AppContainer class="space-y-8 py-12 sm:py-16">
     <PageHero
       eyebrow="Contact"
-      title="联系我们"
-      description="有合作、纠错或建议，欢迎发邮件。若希望网站被收录，请使用申请收录表单。"
+      :title="t('contactTitle')"
+      :description="t('contactIntro')"
     />
     <p class="text-sm text-zinc-600 dark:text-zinc-300">
-      邮箱：
+      {{ t('emailLabel') }}
       <a
         :href="`mailto:${SITE_CONTACT_EMAIL}`"
         class="font-medium text-accent underline decoration-accent/30 underline-offset-2"
@@ -29,7 +31,7 @@ usePageSeo({
         to="/apply"
         class="font-medium text-accent underline decoration-accent/30 underline-offset-2"
       >
-        申请收录
+        {{ t('footerApply') }}
       </NuxtLink>
     </p>
   </AppContainer>
