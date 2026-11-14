@@ -1302,6 +1302,176 @@
             "nameEn": "Webmaster",
             "fullNameEn": "Search webmaster & indexing",
             "descriptionEn": "Search Console, sitemaps, and indexing tools."
+        },
+        {
+            "id": "phone",
+            "slug": "phone",
+            "name": "号码检测",
+            "fullName": "号码质量与运营商查询",
+            "description": "查询号码是否为 VOIP、所属运营商、线路类型与归属地。",
+            "icon": "phone",
+            "items": [
+                {
+                    "id": "ipqs-carrier",
+                    "name": "IPQS 运营商查询",
+                    "description": "识别 VOIP、移动与固话，并显示运营商",
+                    "url": "https://www.ipqualityscore.com/free-carrier-lookup",
+                    "tags": ["号码", "VOIP"],
+                    "officialUrlConfirmed": true,
+                    "updatedAt": "2026-11-04",
+                    "iconUrl": "/icons/sites/ipqs-carrier.webp",
+                    "nameEn": "IPQS Carrier Lookup",
+                    "descriptionEn": "Spot VOIP, wireless, or landline and the carrier"
+                },
+                {
+                    "id": "ipqs-phone",
+                    "name": "IPQS 号码验证",
+                    "description": "校验号码是否有效，并检测 VOIP 与风险",
+                    "url": "https://www.ipqualityscore.com/phone-number-validator",
+                    "tags": ["号码", "VOIP"],
+                    "officialUrlConfirmed": true,
+                    "updatedAt": "2026-11-04",
+                    "iconUrl": "/icons/sites/ipqs-phone.webp",
+                    "nameEn": "IPQS Phone Validator",
+                    "descriptionEn": "Check if a number is valid, VOIP, or risky"
+                },
+                {
+                    "id": "twilio-lookup",
+                    "name": "Twilio Lookup",
+                    "description": "查询线路类型（VOIP / 移动 / 固话）与运营商",
+                    "url": "https://www.twilio.com/lookup",
+                    "tags": ["号码", "运营商"],
+                    "officialUrlConfirmed": true,
+                    "updatedAt": "2026-11-04",
+                    "iconUrl": "/icons/sites/twilio-lookup.ico",
+                    "descriptionEn": "Line type (VOIP, mobile, landline) and carrier"
+                },
+                {
+                    "id": "numverify",
+                    "name": "NumVerify",
+                    "description": "全球号码校验，返回运营商与线路类型",
+                    "url": "https://numverify.com",
+                    "tags": ["号码", "运营商"],
+                    "officialUrlConfirmed": true,
+                    "updatedAt": "2026-11-04",
+                    "iconUrl": "/icons/sites/numverify.png",
+                    "descriptionEn": "Validate numbers and see carrier plus line type"
+                },
+                {
+                    "id": "freecarrierlookup",
+                    "name": "Free Carrier Lookup",
+                    "description": "查询美国号码的运营商及是否为 VOIP",
+                    "url": "https://freecarrierlookup.com",
+                    "tags": ["号码", "VOIP"],
+                    "officialUrlConfirmed": true,
+                    "updatedAt": "2026-11-04",
+                    "descriptionEn": "US carrier lookup, including VOIP lines"
+                },
+                {
+                    "id": "hlr-lookups",
+                    "name": "HLR Lookups",
+                    "description": "实时查询是否在网、是否携转及当前运营商",
+                    "url": "https://www.hlr-lookups.com",
+                    "tags": ["号码", "运营商"],
+                    "officialUrlConfirmed": true,
+                    "updatedAt": "2026-11-04",
+                    "iconUrl": "/icons/sites/hlr-lookups.ico",
+                    "descriptionEn": "Live status, porting, and current carrier"
+                },
+                {
+                    "id": "telnyx-lookup",
+                    "name": "Telnyx Lookup",
+                    "description": "号码校验，返回运营商与线路类型",
+                    "url": "https://telnyx.com/products/number-lookup",
+                    "tags": ["号码", "运营商"],
+                    "officialUrlConfirmed": true,
+                    "updatedAt": "2026-11-04",
+                    "iconUrl": "/icons/sites/telnyx-lookup.ico",
+                    "descriptionEn": "Number lookup for carrier and line type"
+                },
+                {
+                    "id": "abstract-phone",
+                    "name": "Abstract 号码验证",
+                    "description": "校验号码格式，并返回运营商与线路类型",
+                    "url": "https://www.abstractapi.com/api/phone-validation",
+                    "tags": ["号码", "运营商"],
+                    "officialUrlConfirmed": true,
+                    "updatedAt": "2026-11-04",
+                    "iconUrl": "/icons/sites/abstract-phone.png",
+                    "nameEn": "Abstract Phone Validation",
+                    "descriptionEn": "Validate format, carrier, and line type"
+                },
+                {
+                    "id": "chahaoba",
+                    "name": "查号吧",
+                    "description": "国内手机号段归属地与运营商查询",
+                    "url": "https://www.chahaoba.com",
+                    "tags": ["号码", "归属地"],
+                    "officialUrlConfirmed": true,
+                    "updatedAt": "2026-11-04",
+                    "iconUrl": "/icons/sites/chahaoba.ico",
+                    "nameEn": "Chahaoba",
+                    "descriptionEn": "China mobile prefix, region, and carrier"
+                },
+                {
+                    "id": "ip138",
+                    "name": "ip138",
+                    "description": "手机号码归属地与运营商查询",
+                    "url": "https://www.ip138.com",
+                    "tags": ["号码", "归属地"],
+                    "officialUrlConfirmed": true,
+                    "updatedAt": "2026-11-04",
+                    "iconUrl": "/icons/sites/ip138.ico",
+                    "descriptionEn": "Mobile number region and carrier lookup"
+                },
+                {
+                    "id": "dianhua",
+                    "name": "电话邦",
+                    "description": "号码归属地与来电标记查询",
+                    "url": "https://www.dianhua.cn",
+                    "tags": ["号码", "标记"],
+                    "officialUrlConfirmed": true,
+                    "updatedAt": "2026-11-04",
+                    "iconUrl": "/icons/sites/dianhua.ico",
+                    "nameEn": "Dianhua.cn",
+                    "descriptionEn": "Number region and caller-ID marks"
+                },
+                {
+                    "id": "1lookup",
+                    "name": "1Lookup",
+                    "description": "免费校验号码是否有效，并显示线路类型与运营商",
+                    "url": "https://www.1lookup.io/tools/phone-validator",
+                    "tags": ["号码", "VOIP"],
+                    "officialUrlConfirmed": true,
+                    "updatedAt": "2026-11-04",
+                    "iconUrl": "/icons/sites/1lookup.png",
+                    "descriptionEn": "Free check for validity, line type, and carrier"
+                },
+                {
+                    "id": "verifycarrier",
+                    "name": "VerifyCarrier",
+                    "description": "查询美国货运承运商注册、运营资质与安全记录",
+                    "url": "https://verifycarrier.com/",
+                    "tags": ["承运商", "查询"],
+                    "officialUrlConfirmed": true,
+                    "updatedAt": "2026-11-04",
+                    "descriptionEn": "FMCSA carrier registration, authority, and safety lookup"
+                },
+                {
+                    "id": "realphonevalidation",
+                    "name": "Real Phone Validation",
+                    "description": "实时校验号码是否有效，支持 API 与批量查询",
+                    "url": "https://realphonevalidation.com/phone-validator-tool/",
+                    "tags": ["号码", "校验"],
+                    "officialUrlConfirmed": true,
+                    "updatedAt": "2026-11-04",
+                    "iconUrl": "/icons/sites/realphonevalidation.jpg",
+                    "descriptionEn": "Real-time phone validation via API or bulk upload"
+                }
+            ],
+            "nameEn": "Phone Check",
+            "fullNameEn": "Number quality & carrier lookup",
+            "descriptionEn": "Check whether a number is VOIP, which carrier it uses, and its line type."
         }
     ]
 }

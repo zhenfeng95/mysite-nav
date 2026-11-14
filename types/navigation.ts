@@ -11,6 +11,7 @@ export type NavigationIcon =
   | 'video'
   | 'music'
   | 'invest'
+  | 'phone'
 
 export interface NavigationItem {
   id: string

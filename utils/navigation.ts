@@ -52,7 +52,7 @@ export const navigationGroups: NavigationGroup[] = [
     titleEn: 'Social & Tools',
     description: '社交平台与实用在线工具。',
     descriptionEn: 'Social platforms and everyday tools.',
-    slugs: ['social', 'tools', 'storage', 'analytics', 'webmaster'],
+    slugs: ['social', 'tools', 'phone', 'storage', 'analytics', 'webmaster'],
   },
 ]
 
@@ -64,6 +64,7 @@ const shortDescriptions: Record<string, { zh: string, en: string }> = {
   design: { zh: '界面设计与图标资源入口', en: 'UI design and icon resources' },
   social: { zh: '社交、问答与邮箱入口', en: 'Social, Q&A, and email' },
   tools: { zh: '翻译、查询与格式化工具', en: 'Translate, lookup, and format tools' },
+  phone: { zh: '查询号码是否为 VOIP、运营商与线路类型', en: 'VOIP, carrier, and line-type checks' },
   storage: { zh: '百度、阿里、夸克、天翼等网盘入口', en: 'Cloud drives and file storage' },
   video: { zh: '影视、短视频与直播平台入口', en: 'Video, short video, and live' },
   music: { zh: '网易云、QQ 音乐与酷狗入口', en: 'Online music platforms' },

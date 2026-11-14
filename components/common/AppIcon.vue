@@ -21,6 +21,7 @@ export type IconName =
   | 'video'
   | 'music'
   | 'invest'
+  | 'phone'
 
 defineProps<{
   name: IconName
@@ -117,6 +118,10 @@ defineProps<{
       <path d="M4 19V5M4 19h16" />
       <path d="M8 15l3.5-4 3 2.5L18 8" />
       <path d="M15.5 8H18v2.5" />
+    </g>
+    <g v-else-if="name === 'phone'">
+      <rect x="7" y="3.5" width="10" height="17" rx="2" />
+      <path d="M11 17.5h2" />
     </g>
   </svg>
 </template>
